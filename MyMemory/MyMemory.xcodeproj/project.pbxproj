@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B7BC9B5E2663C737007713D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BC9B5D2663C737007713D1 /* AppDelegate.swift */; };
 		B7BC9B602663C737007713D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BC9B5F2663C737007713D1 /* SceneDelegate.swift */; };
-		B7BC9B622663C737007713D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BC9B612663C737007713D1 /* ViewController.swift */; };
 		B7BC9B652663C737007713D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BC9B632663C737007713D1 /* Main.storyboard */; };
 		B7BC9B672663C738007713D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC9B662663C738007713D1 /* Assets.xcassets */; };
 		B7BC9B6A2663C738007713D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BC9B682663C738007713D1 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		B7BC9B5A2663C737007713D1 /* MyMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BC9B5D2663C737007713D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7BC9B5F2663C737007713D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7BC9B612663C737007713D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7BC9B642663C737007713D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7BC9B662663C738007713D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BC9B692663C738007713D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			children = (
 				B7BC9B5D2663C737007713D1 /* AppDelegate.swift */,
 				B7BC9B5F2663C737007713D1 /* SceneDelegate.swift */,
-				B7BC9B612663C737007713D1 /* ViewController.swift */,
 				B7BC9B632663C737007713D1 /* Main.storyboard */,
 				B7BC9B662663C738007713D1 /* Assets.xcassets */,
 				B7BC9B682663C738007713D1 /* LaunchScreen.storyboard */,
@@ -137,7 +134,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BC9B622663C737007713D1 /* ViewController.swift in Sources */,
 				B7BC9B5E2663C737007713D1 /* AppDelegate.swift in Sources */,
 				B7BC9B602663C737007713D1 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kant.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +311,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kant.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
