@@ -11,7 +11,7 @@
         <!--목록-->
         <scene sceneID="cip-DQ-DQC">
             <objects>
-                <tableViewController id="Cf4-cw-Y6J" sceneMemberID="viewController">
+                <tableViewController id="Cf4-cw-Y6J" customClass="MemoListVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cxO-0r-I8N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="jlJ-Kd-sF9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="jlJ-Kd-sF9" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jlJ-Kd-sF9" id="cNI-IY-E53">
@@ -70,7 +70,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="XK9-yJ-z9f">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="XK9-yJ-z9f" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="104.5" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XK9-yJ-z9f" id="OMg-Gy-H6S">
@@ -148,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="471.01449275362324" y="87.723214285714278"/>
         </scene>
-        <!--Title-->
+        <!--상세화면-->
         <scene sceneID="nmc-xl-V3r">
             <objects>
-                <viewController id="UuJ-l6-TMR" sceneMemberID="viewController">
+                <viewController title="상세화면" id="UuJ-l6-TMR" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ung-NS-FOW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,9 +172,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HuS-qr-aPi">
-                                <rect key="frame" x="16" y="181" width="250" height="250"/>
+                                <rect key="frame" x="16" y="203" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="0Jt-3y-aUu"/>
+                                    <constraint firstAttribute="height" constant="250" placeholder="YES" id="0Jt-3y-aUu"/>
                                     <constraint firstAttribute="width" constant="250" id="qAS-Uc-3w4"/>
                                 </constraints>
                             </imageView>
@@ -189,19 +189,19 @@
                             <constraint firstItem="HuS-qr-aPi" firstAttribute="leading" secondItem="Jjb-OR-ZjK" secondAttribute="leading" constant="16" id="GcY-nD-iac"/>
                             <constraint firstItem="ewg-uR-pwx" firstAttribute="leading" secondItem="Jjb-OR-ZjK" secondAttribute="leading" constant="16" id="K5d-rb-S9M"/>
                             <constraint firstItem="Jjb-OR-ZjK" firstAttribute="trailing" secondItem="ewg-uR-pwx" secondAttribute="trailing" constant="16" id="U5D-lQ-NNs"/>
-                            <constraint firstItem="HuS-qr-aPi" firstAttribute="top" secondItem="ewg-uR-pwx" secondAttribute="bottom" constant="20" id="r9i-pO-ZS3"/>
+                            <constraint firstItem="HuS-qr-aPi" firstAttribute="top" secondItem="ewg-uR-pwx" secondAttribute="bottom" constant="42" id="r9i-pO-ZS3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="4t6-CG-8Dh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQf-v1-FDu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="-619"/>
+            <point key="canvasLocation" x="1393" y="88"/>
         </scene>
         <!--메모 작성-->
         <scene sceneID="4c2-b8-nv0">
             <objects>
-                <viewController id="NyX-as-mCo" sceneMemberID="viewController">
+                <viewController id="NyX-as-mCo" customClass="MemoFormVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UW8-Zo-x8O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,14 +236,26 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="66k-O6-jSv">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="G6I-mG-y5S"/>
-                            <barButtonItem title="저장" id="p9n-gE-fMB"/>
+                            <barButtonItem systemItem="camera" id="G6I-mG-y5S">
+                                <connections>
+                                    <action selector="pick:" destination="NyX-as-mCo" id="Ajj-ZU-qOb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="p9n-gE-fMB">
+                                <connections>
+                                    <action selector="save:" destination="NyX-as-mCo" id="vRo-L7-4kN"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contents" destination="I0e-tR-3Km" id="UlG-nJ-eof"/>
+                        <outlet property="preview" destination="bRN-JP-AE9" id="DQ2-2U-H5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uvs-Ys-4eR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.7391304347827" y="87.723214285714278"/>
+            <point key="canvasLocation" x="471" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ipu-fo-xZj">
