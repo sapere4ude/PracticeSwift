@@ -25,9 +25,26 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBAction func save(_ sender: Any) {
         // 내용을 입력하지 않았을 경우 경고 생성
         guard self.contents.text?.isEmpty == false else {
-            
+            // 내용이 비어있을 때의 처리과정
+            let alert = UIAlertController(title: nil, message: "내용을 입력해주세요", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
             return
         }
+        
+        let data = MemoData()
+        
+        data.title =  self.subject
+        data.contents = self.contents.text
+        data.image = self.preview.image
+        data.registerDate = Date()
+        
+        // 앱 델리게이트 객체를 읽어온 뒤, memoList 배열에 MemoData 객체를 추가한다. (공용 저장소에 저장한다고 생각)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memoList.append(data)
+        
+        _ = self.navigationController?.popViewController(animated: true)
+        
     }
     
     // 카메라 버튼 눌렀을때 호출
