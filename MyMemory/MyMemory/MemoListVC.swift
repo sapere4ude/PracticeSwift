@@ -33,6 +33,7 @@ class MemoListVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = self.appDelegate.memoList[indexPath.row]
         
+        // 이미지 유무로 Cell을 구분
         let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemoCell
