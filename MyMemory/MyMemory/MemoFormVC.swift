@@ -64,7 +64,7 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         picker.dismiss(animated: false)
     }
     
-    // 사용자가 텍스트 뷰에 무언가를 입력했을 경우 자동으로 이 메소드가 호출됨
+    // 사용자가 텍스트 뷰에 무언가를 입력했을 경우 자동으로 해당 메소드가 호출됨
     func textViewDidChange(_ textView: UITextView) {
         let contents = textView.text as NSString
         let length = ((contents.length > 15) ? 15 : contents.length)
