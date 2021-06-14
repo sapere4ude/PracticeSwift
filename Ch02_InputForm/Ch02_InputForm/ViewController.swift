@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var paramUpdate: UISwitch!
     var paramInterval: UIStepper!
     var txtUpdate: UILabel!
+    var txtInterval: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,15 @@ class ViewController: UIViewController {
         self.txtUpdate.text = "갱신함"
         
         self.view.addSubview(self.txtUpdate)
+        
+        
+        self.txtInterval = UILabel()
+        self.txtInterval.frame = CGRect(x: 250, y: 200, width: 100, height: 30)
+        self.txtInterval.font = UIFont.systemFont(ofSize: 12)
+        self.txtInterval.textColor = UIColor.red
+        self.txtInterval.text = "0분마다"
+        
+        self.view.addSubview(self.txtInterval)
         
     }
 
