@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         self.paramEmail.frame = CGRect(x: 120, y: 100, width: 220, height: 30)
         self.paramEmail.font = UIFont.systemFont(ofSize: 13)
         self.paramEmail.borderStyle = .roundedRect
+        self.paramEmail.autocapitalizationType = .none
         self.paramEmail.adjustsFontSizeToFitWidth = true
         self.paramEmail.placeholder = "이메일을 입력하세요"
         
@@ -62,6 +63,7 @@ class ViewController: UIViewController {
         
         
         self.paramInterval = UIStepper()
+        self.paramInterval.frame = CGRect(x: 120, y: 200, width: 50, height: 30)
         self.paramInterval.minimumValue = 0
         self.paramInterval.maximumValue = 100
         self.paramInterval.stepValue = 1        // 값 변경 단위
@@ -86,8 +88,18 @@ class ViewController: UIViewController {
         
         self.view.addSubview(self.txtInterval)
         
+        self.paramUpdate.addTarget(self, action: #selector(presentUpdateValue(_:)), for: .valueChanged)
+        self.paramInterval.addTarget(self, action: #selector(presentIntervalValue(_:)), for: .valueChanged)
     }
-
-
+    
+    // 스위치와 상호반응하는 액션 메서드
+    @objc func presentUpdateValue(_ sender: UISwitch) {
+        self.txtUpdate.text = (sender.isOn == true ? "갱신함" : "갱신하지 않음")
+    }
+    
+    // 스태퍼와 상호반응하는 액션 메서드
+    @objc func presentIntervalValue(_ sender: UIStepper) {
+        self.txtInterval.text = ("\(Int(sender.value))분마다")
+    }
 }
 
