@@ -58,6 +58,11 @@ func isValidCharacterAndNumber(pwd: String) -> Bool {
 func isValidatePasswordSuccessive(pwd: String) -> Bool {
     
     let passwordRegEx = "(.)\\1\\1" // 동일한 한 글자(문자, 숫자)가 3번 중복
-    let predicate = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
-    return predicate.evaluate(with: pwd)
+    
+    if pwd.range(of: passwordRegEx, options: .regularExpression) != nil {
+           return false
+       } else {
+           return true
+       }
+
 }
