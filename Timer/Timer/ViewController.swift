@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         }
         
         
-        UIView.transition(with: self.timerLabel, duration: 0.3, options: .transitionFlipFromBottom) {
+        UIView.transition(with: self.timerLabel, duration: 0.3, options: .curveEaseInOut) {
             if self.secondsLeft > 0 {
                 self.timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
             } else {
