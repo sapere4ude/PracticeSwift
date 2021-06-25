@@ -8,7 +8,7 @@
 import UIKit
 
 protocol passDataDelegate {
-    func passData(text: String!)
+    func passData(text: String)
 }
 
 class PassDataViewController: UIViewController {
@@ -28,7 +28,7 @@ class PassDataViewController: UIViewController {
     }
     
     @IBAction func passData(_ sender: Any) {
-        self.delegate?.passData(text: "\(String(describing: inputText))")
+        self.delegate?.passData(text: "10")
         self.completion?("목요일 오후 10:45")
 //        let main = self.presentingViewController
 //        main?.reloadInputViews()

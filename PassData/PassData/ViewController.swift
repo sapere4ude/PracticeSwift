@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        passDataVC.delegate = self
     }
     
     @IBAction func Move(_ sender: Any) {
@@ -32,7 +34,8 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: passDataDelegate {
-    func passData(text: String!) {
+    func passData(text: String) {
         self.delegateLabel.text = text
+        print("\(String(describing: self.delegateLabel.text))")
     }
 }
