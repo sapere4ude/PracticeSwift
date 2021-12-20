@@ -13,6 +13,7 @@
 		B7C3D951268769500080A260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C3D94F268769500080A260 /* Main.storyboard */; };
 		B7C3D953268769510080A260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C3D952268769510080A260 /* Assets.xcassets */; };
 		B7C3D956268769510080A260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C3D954268769510080A260 /* LaunchScreen.storyboard */; };
+		B7C3D95E268783180080A260 /* LiveSetting.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C3D95D268783180080A260 /* LiveSetting.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B7C3D952268769510080A260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7C3D955268769510080A260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7C3D957268769510080A260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7C3D95D268783180080A260 /* LiveSetting.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveSetting.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B7C3D94B268769500080A260 /* SceneDelegate.swift */,
 				B7C3D94D268769500080A260 /* ViewController.swift */,
 				B7C3D94F268769500080A260 /* Main.storyboard */,
+				B7C3D95D268783180080A260 /* LiveSetting.xib */,
 				B7C3D952268769510080A260 /* Assets.xcassets */,
 				B7C3D954268769510080A260 /* LaunchScreen.storyboard */,
 				B7C3D957268769510080A260 /* Info.plist */,
@@ -126,6 +129,7 @@
 			files = (
 				B7C3D956268769510080A260 /* LaunchScreen.storyboard in Resources */,
 				B7C3D953268769510080A260 /* Assets.xcassets in Resources */,
+				B7C3D95E268783180080A260 /* LiveSetting.xib in Resources */,
 				B7C3D951268769500080A260 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
