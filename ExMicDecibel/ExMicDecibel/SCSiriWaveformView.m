@@ -15,6 +15,9 @@
 #define     kHighGraphCount     9
 #define     kMaxGraphCount      6
 
+#define DBOFFSET -74.0
+#define LOWPASSFILTERTIMESLICE .001
+
 @interface SCSiriWaveformView ()
 
 @property (nonatomic)           CGFloat             screenWidth;
@@ -164,5 +167,30 @@
     
     CGContextStrokePath(context);
 }
+
+- (Float32)findPeakValue:(const SInt16 *)samples frame:(UInt32)inNumberFrames
+    {
+        Float32 decibels = DBOFFSET;
+        Float32 peakValue = DBOFFSET;
+        
+        Float32 curFilteredValueOfSampleAmplitude, preFilteredValueOfSampleAmplitude = 0.0;
+        
+        for (int i=0; i < inNumberFrames; i++)
+        {
+            Float32 absoluteValueOfSampleAmplitude = abs(samples[i]);
+            curFilteredValueOfSampleAmplitude = LOWPASSFILTERTIMESLICE * absoluteValueOfSampleAmplitude + (1.0 - LOWPASSFILTERTIMESLICE) * preFilteredValueOfSampleAmplitude;
+            preFilteredValueOfSampleAmplitude = curFilteredValueOfSampleAmplitude;
+            
+            Float32 amplitudeToConvertToDB = curFilteredValueOfSampleAmplitude;
+            Float32 sampleDB = 20.0*log10(amplitudeToConvertToDB) + DBOFFSET;
+            if((sampleDB == sampleDB) && (sampleDB != -DBL_MAX))
+            {
+                if(sampleDB > peakValue) peakValue = sampleDB;
+                decibels = peakValue;
+            }
+        }
+        
+        return decibels;
+    }
 
 @end

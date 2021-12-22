@@ -15,6 +15,7 @@
 		B77C72182770D64C00FB02EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B77C72162770D64C00FB02EB /* LaunchScreen.storyboard */; };
 		B77C72202770D67000FB02EB /* MicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77C721F2770D67000FB02EB /* MicManager.swift */; };
 		B77C72232770D71800FB02EB /* SCSiriWaveformView.m in Sources */ = {isa = PBXBuildFile; fileRef = B77C72222770D71800FB02EB /* SCSiriWaveformView.m */; };
+		B79343FB2771DD98003ACC52 /* AudioRecordGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = B79343FA2771DD98003ACC52 /* AudioRecordGraph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		B77C72212770D71700FB02EB /* ExMicDecibel-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExMicDecibel-Bridging-Header.h"; sourceTree = "<group>"; };
 		B77C72222770D71800FB02EB /* SCSiriWaveformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSiriWaveformView.m; sourceTree = "<group>"; };
 		B77C72242770D7CE00FB02EB /* SCSiriWaveformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSiriWaveformView.h; sourceTree = "<group>"; };
+		B79343FA2771DD98003ACC52 /* AudioRecordGraph.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioRecordGraph.m; sourceTree = "<group>"; };
+		B79343FC2771DDAB003ACC52 /* AudioRecordGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioRecordGraph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +69,15 @@
 				B77C720D2770D64B00FB02EB /* SceneDelegate.swift */,
 				B77C720F2770D64B00FB02EB /* ViewController.swift */,
 				B77C721F2770D67000FB02EB /* MicManager.swift */,
+				B79343FA2771DD98003ACC52 /* AudioRecordGraph.m */,
+				B79343FC2771DDAB003ACC52 /* AudioRecordGraph.h */,
 				B77C72112770D64B00FB02EB /* Main.storyboard */,
 				B77C72142770D64C00FB02EB /* Assets.xcassets */,
 				B77C72162770D64C00FB02EB /* LaunchScreen.storyboard */,
 				B77C72192770D64C00FB02EB /* Info.plist */,
 				B77C72222770D71800FB02EB /* SCSiriWaveformView.m */,
-				B77C72212770D71700FB02EB /* ExMicDecibel-Bridging-Header.h */,
 				B77C72242770D7CE00FB02EB /* SCSiriWaveformView.h */,
+				B77C72212770D71700FB02EB /* ExMicDecibel-Bridging-Header.h */,
 			);
 			path = ExMicDecibel;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79343FB2771DD98003ACC52 /* AudioRecordGraph.m in Sources */,
 				B77C72102770D64B00FB02EB /* ViewController.swift in Sources */,
 				B77C720C2770D64B00FB02EB /* AppDelegate.swift in Sources */,
 				B77C720E2770D64B00FB02EB /* SceneDelegate.swift in Sources */,

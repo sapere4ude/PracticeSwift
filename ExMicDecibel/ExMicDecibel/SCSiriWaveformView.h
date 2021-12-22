@@ -5,7 +5,6 @@
 //  Created by Kant on 2021/12/21.
 //
 
-//@import UIKit;
 #import <UIKit/UIKit.h>
 
 @interface SCSiriWaveformView : UIView

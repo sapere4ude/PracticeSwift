@@ -92,6 +92,7 @@ class MicManager: NSObject {
         let db = Double(recorder?.averagePower(forChannel: 0) ?? -160)
         let result = pow(10.0, db / 20.0)
         print("result: \(result)")
+        
         delegate?.avgAudioVolumeResult(result)
         
         /*
@@ -107,6 +108,20 @@ class MicManager: NSObject {
         let db2 = Double(recorder?.peakPower(forChannel: 0) ?? -160)
         let result2 = pow(10.0, db2 / 20.0)
         delegate?.peakAudioVolumeResult(result2)
+    }
+    
+    private func normalizeSoundLevel(level: Float) -> Float {
+        // 화면에 표시되는 rawSoundLevel 기준
+        // white noise만 존재할 때의 값을 lowLevel 에 할당
+        // 가장 큰 소리를 냈을 때 값을 highLevel 에 할당
+        
+        let lowLevel: Float = -50
+        let highLevel: Float = -10
+        
+        var level = max(0.0, level - lowLevel) // low level이 0이 되도록 shift
+        level = min(level, highLevel - lowLevel) // high level 도 shift
+        // 이제 level은 0.0 ~ 40까지의 값으로 설정 됨.
+        return level / (highLevel - lowLevel) // scaled to 0.0 ~ 1
     }
 }
 
