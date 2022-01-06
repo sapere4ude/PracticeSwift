@@ -5,6 +5,9 @@
 //  Created by Kant on 2021/12/20.
 //
 
+// String 다루기 참고 블로그 : https://tngusmiso.tistory.com/46
+
+
 import UIKit
 
 class ViewController: UIViewController {
