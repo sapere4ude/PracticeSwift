@@ -19,17 +19,46 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rFK-48-5gu">
                                 <rect key="frame" x="51" y="306" width="323" height="31"/>
                             </slider>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hHi-gj-nUl" customClass="StepSlider">
+                                <rect key="frame" x="53" y="384" width="319" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxCount">
+                                        <integer key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="index">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackCircleRadius">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="sliderCircleRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="soundVolumeChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="iuE-dE-d0m"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hHi-gj-nUl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="340" id="CGz-RO-9ux"/>
                             <constraint firstItem="rFK-48-5gu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="262" id="Gnw-tg-Wy1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hHi-gj-nUl" secondAttribute="bottom" constant="350" id="Mzx-w5-Vn6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hHi-gj-nUl" secondAttribute="trailing" constant="82" id="WK6-fh-TxS"/>
                             <constraint firstItem="rFK-48-5gu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="meB-MF-sFf"/>
+                            <constraint firstItem="hHi-gj-nUl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="pKJ-WH-ePl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rFK-48-5gu" secondAttribute="trailing" constant="42" id="v21-Wp-TYy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="slider" destination="rFK-48-5gu" id="Ujh-ms-DBu"/>
+                        <outlet property="stepSlider" destination="hHi-gj-nUl" id="w9f-IU-fWJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
