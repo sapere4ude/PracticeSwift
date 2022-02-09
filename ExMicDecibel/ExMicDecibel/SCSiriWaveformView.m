@@ -106,7 +106,7 @@
     {
         range = _maxLayersCount;
     }
-    
+//    NSLog(@"range: %@", range);
     return range;
 }
 

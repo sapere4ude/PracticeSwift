@@ -21,7 +21,7 @@ class MicManager: NSObject {
 
     private var recorder : AVAudioRecorder? = nil
     private var timer: Timer?
-    var interval: Double = 0.2
+    var interval: Double = 0.05
 
     func getDocumentsDirectory() -> URL {
         let fileManager = FileManager.default
@@ -91,7 +91,7 @@ class MicManager: NSObject {
         recorder?.updateMeters()
         let db = Double(recorder?.averagePower(forChannel: 0) ?? -160)
         let result = pow(10.0, db / 20.0)
-        print("result: \(result)")
+        print("result1: \(result)")
         
         delegate?.avgAudioVolumeResult(result)
         
@@ -108,6 +108,8 @@ class MicManager: NSObject {
         let db2 = Double(recorder?.peakPower(forChannel: 0) ?? -160)
         let result2 = pow(10.0, db2 / 20.0)
         delegate?.peakAudioVolumeResult(result2)
+        print("result2: \(result2)")
+        
     }
     
     private func normalizeSoundLevel(level: Float) -> Float {

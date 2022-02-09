@@ -13,6 +13,8 @@
 		B7315D0627979F06005712E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7315D0427979F06005712E0 /* Main.storyboard */; };
 		B7315D0827979F07005712E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7315D0727979F07005712E0 /* Assets.xcassets */; };
 		B7315D0B27979F07005712E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7315D0927979F07005712E0 /* LaunchScreen.storyboard */; };
+		B7315D132797A43B005712E0 /* PlainHorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7315D122797A43B005712E0 /* PlainHorizontalProgressBar.swift */; };
+		B7315D172797B44E005712E0 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7315D162797B44E005712E0 /* CustomSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B7315D0727979F07005712E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7315D0A27979F07005712E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7315D0C27979F07005712E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7315D122797A43B005712E0 /* PlainHorizontalProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHorizontalProgressBar.swift; sourceTree = "<group>"; };
+		B7315D162797B44E005712E0 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				B7315D0727979F07005712E0 /* Assets.xcassets */,
 				B7315D0927979F07005712E0 /* LaunchScreen.storyboard */,
 				B7315D0C27979F07005712E0 /* Info.plist */,
+				B7315D122797A43B005712E0 /* PlainHorizontalProgressBar.swift */,
+				B7315D162797B44E005712E0 /* CustomSlider.swift */,
 			);
 			path = CustomSlider;
 			sourceTree = "<group>";
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7315D0327979F06005712E0 /* ViewController.swift in Sources */,
+				B7315D172797B44E005712E0 /* CustomSlider.swift in Sources */,
 				B7315CFF27979F06005712E0 /* AppDelegate.swift in Sources */,
+				B7315D132797A43B005712E0 /* PlainHorizontalProgressBar.swift in Sources */,
 				B7315D0127979F06005712E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

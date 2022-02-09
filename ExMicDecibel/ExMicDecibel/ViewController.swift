@@ -102,32 +102,26 @@ extension ViewController: MicManagerDelegate {
     
     func avgAudioVolumeResult(_ value: Double) {
         let db = value * decibelLimit
-//        soundView.titleLabel.text = "Avg    : \(db)"
-//        soundView.updateValue(getRatio(from: db))
-        
+////        soundView.titleLabel.text = "Avg    : \(db)"
+////        soundView.updateValue(getRatio(from: db))
+//
         waveFormView.update(withLevel: getRatio(from: db))
     }
     
     func peakAudioVolumeResult(_ value: Double) {
-        let db = value * decibelLimit
+//        let db = value * decibelLimit
 //        peakSoundView.titleLabel.text = "Peak   : \(db)"
 //        peakSoundView.updateValue(getRatio(from: db))
         
-        waveFormView.update(withLevel: getRatio(from: db))
+//        waveFormView.update(withLevel: getRatio(from: db))
     }
     
     private func getRatio(from value: Double) -> CGFloat {
-        var decibel = CGFloat(value)
-        if (value < -60.0 || value == 0.0) {
-            decibel = 0;
+        if (value < 1.0) {
+            return CGFloat(value / upperLimit)
+        } else {
+            return CGFloat((value / upperLimit) * 10)
         }
-        else {
-//            decibel = powf((powf(10.0, 0.05 * value) - powf(10.0, 0.05 * -60.0)) * (1.0 / (1.0 - powf(10.0, 0.05 * -60.0))), 1.0 / 2.0);
-            decibel = CGFloat(powf((powf(10.0, Float(0.05 * value)) - powf(10.0, 0.05 * -60.0)) * (1.0 / (1.0 - powf(10.0, 0.05 * -60.0))), 1.0 / 2.0))
-        }
-        
-//        return CGFloat(value / upperLimit)
-        return CGFloat(decibel)
     }
 }
 

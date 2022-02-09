@@ -501,14 +501,14 @@
         UInt32 numBuffers = interleaved ? 1 : channelsPerFrame;
         UInt32 channelsPerBuffer = interleaved ? channelsPerFrame : 1;
         
-        bufferList = static_cast<AudioBufferList *>(calloc(1, offsetof(AudioBufferList, mBuffers) + (sizeof(AudioBuffer) * numBuffers)));
-        bufferList->mNumberBuffers = numBuffers;
-        
-        for(UInt32 bufferIndex = 0; bufferIndex < bufferList->mNumberBuffers; ++bufferIndex) {
-            bufferList->mBuffers[bufferIndex].mData = static_cast<void *>(calloc(capacityFrames, bytesPerFrame));
-            bufferList->mBuffers[bufferIndex].mDataByteSize = capacityFrames * bytesPerFrame;
-            bufferList->mBuffers[bufferIndex].mNumberChannels = channelsPerBuffer;
-        }
+//        bufferList = static_cast<AudioBufferList *>(calloc(1, offsetof(AudioBufferList, mBuffers) + (sizeof(AudioBuffer) * numBuffers)));
+//        bufferList->mNumberBuffers = numBuffers;
+//        
+//        for(UInt32 bufferIndex = 0; bufferIndex < bufferList->mNumberBuffers; ++bufferIndex) {
+//            bufferList->mBuffers[bufferIndex].mData = static_cast<void *>(calloc(capacityFrames, bytesPerFrame));
+//            bufferList->mBuffers[bufferIndex].mDataByteSize = capacityFrames * bytesPerFrame;
+//            bufferList->mBuffers[bufferIndex].mNumberChannels = channelsPerBuffer;
+//        }
         
         return bufferList;
     }
@@ -709,7 +709,10 @@
         if ([[NSFileManager defaultManager] fileExistsAtPath:path] == NO)
             [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:NULL];
         
-        NSString * fileName = [NSString stringWithFormat:@"%@.m4a", [SimPotUtil dateString:[NSDate date] withDateFormat:@"yyyy년 MM월 dd일 - HH:mm:ss"]];
+//        NSString * fileName = [NSString stringWithFormat:@"%@.m4a", [SimPotUtil dateString:[NSDate date] withDateFormat:@"yyyy년 MM월 dd일 - HH:mm:ss"]];
+        
+        NSString * fileName = @"";
+        
         _currentRecordFile = [NSString stringWithFormat:@"%@/%@", path, fileName];
         return _currentRecordFile;
     }

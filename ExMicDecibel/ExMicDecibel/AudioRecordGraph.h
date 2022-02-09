@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <UIKit/UIKit.h>
 
 @protocol AudioRecorderDelegate <NSObject>
 - (void)setEffectOffset:(CGFloat)offset;
