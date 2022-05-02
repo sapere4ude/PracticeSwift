@@ -14,6 +14,8 @@
 		B769C247281D7BB600A087A6 /* ExDownloadImageTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B769C245281D7BB600A087A6 /* ExDownloadImageTest.xcdatamodeld */; };
 		B769C249281D7BB700A087A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B769C248281D7BB700A087A6 /* Assets.xcassets */; };
 		B769C24C281D7BB700A087A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B769C24A281D7BB700A087A6 /* LaunchScreen.storyboard */; };
+		B769C254281FFD8E00A087A6 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769C253281FFD8E00A087A6 /* ImageCollectionViewCell.swift */; };
+		B769C2562820083600A087A6 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B769C2552820083600A087A6 /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B769C248281D7BB700A087A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B769C24B281D7BB700A087A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B769C24D281D7BB700A087A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B769C253281FFD8E00A087A6 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B769C2552820083600A087A6 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				B769C23C281D7BB600A087A6 /* AppDelegate.swift */,
 				B769C23E281D7BB600A087A6 /* SceneDelegate.swift */,
 				B769C240281D7BB600A087A6 /* ViewController.swift */,
+				B769C253281FFD8E00A087A6 /* ImageCollectionViewCell.swift */,
+				B769C2552820083600A087A6 /* APIResponse.swift */,
 				B769C242281D7BB600A087A6 /* Main.storyboard */,
 				B769C248281D7BB700A087A6 /* Assets.xcassets */,
 				B769C24A281D7BB700A087A6 /* LaunchScreen.storyboard */,
@@ -143,8 +149,10 @@
 			files = (
 				B769C247281D7BB600A087A6 /* ExDownloadImageTest.xcdatamodeld in Sources */,
 				B769C241281D7BB600A087A6 /* ViewController.swift in Sources */,
+				B769C254281FFD8E00A087A6 /* ImageCollectionViewCell.swift in Sources */,
 				B769C23D281D7BB600A087A6 /* AppDelegate.swift in Sources */,
 				B769C23F281D7BB600A087A6 /* SceneDelegate.swift in Sources */,
+				B769C2562820083600A087A6 /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
