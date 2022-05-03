@@ -19,6 +19,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        // contentView -> cell에서 self를 의미하는 것 
         contentView.addSubview(imageView)
     }
     
