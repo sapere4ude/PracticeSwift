@@ -84,7 +84,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
             return UICollectionViewCell()
         }
         cell.configure(with: imageURLString)
-        cell.backgroundColor = .blue
+        cell.backgroundColor = .systemGray
         return cell
     }
 }
