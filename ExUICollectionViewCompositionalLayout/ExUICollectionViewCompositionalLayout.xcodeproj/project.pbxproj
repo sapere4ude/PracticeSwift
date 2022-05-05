@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B724972B282402F100251F25 /* HeaderCollectionSecondReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724972A282402F100251F25 /* HeaderCollectionSecondReusableView.swift */; };
 		B77B6DD028139338000DEBFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B6DCF28139338000DEBFD /* AppDelegate.swift */; };
 		B77B6DD228139338000DEBFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B6DD128139338000DEBFD /* SceneDelegate.swift */; };
 		B77B6DD428139338000DEBFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B6DD328139338000DEBFD /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B724972A282402F100251F25 /* HeaderCollectionSecondReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionSecondReusableView.swift; sourceTree = "<group>"; };
 		B77B6DCC28139338000DEBFD /* ExUICollectionViewCompositionalLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExUICollectionViewCompositionalLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77B6DCF28139338000DEBFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B77B6DD128139338000DEBFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				B77B6DE628144C57000DEBFD /* HeaderCollectionReusableView.swift */,
+				B724972A282402F100251F25 /* HeaderCollectionSecondReusableView.swift */,
 				B77B6DCE28139338000DEBFD /* ExUICollectionViewCompositionalLayout */,
 				B77B6DCD28139338000DEBFD /* Products */,
 			);
@@ -146,6 +149,7 @@
 			files = (
 				B77B6DD428139338000DEBFD /* ViewController.swift in Sources */,
 				B77B6DD028139338000DEBFD /* AppDelegate.swift in Sources */,
+				B724972B282402F100251F25 /* HeaderCollectionSecondReusableView.swift in Sources */,
 				B77B6DD228139338000DEBFD /* SceneDelegate.swift in Sources */,
 				B77B6DE728144C57000DEBFD /* HeaderCollectionReusableView.swift in Sources */,
 				B77B6DDA28139338000DEBFD /* ExUICollectionViewCompositionalLayout.xcdatamodeld in Sources */,

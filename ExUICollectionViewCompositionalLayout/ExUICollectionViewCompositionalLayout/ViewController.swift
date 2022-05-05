@@ -21,6 +21,7 @@ final class ViewController: UIViewController {
         view.clipsToBounds = true
         view.register(MyCell.self, forCellWithReuseIdentifier: "MyCell")
         view.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier)
+        view.register(HeaderCollectionSecondReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionSecondReusableView.identifier)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
