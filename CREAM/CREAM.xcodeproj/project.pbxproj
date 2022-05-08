@@ -20,6 +20,7 @@
 		B724972428226FEF00251F25 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724972328226FEF00251F25 /* ShopViewController.swift */; };
 		B72497262822700700251F25 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72497252822700700251F25 /* WatchViewController.swift */; };
 		B72497282822701000251F25 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72497272822701000251F25 /* MyViewController.swift */; };
+		B724972E2827DB9100251F25 /* AdvertisementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724972D2827DB9100251F25 /* AdvertisementCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B724972328226FEF00251F25 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		B72497252822700700251F25 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 		B72497272822701000251F25 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		B724972D2827DB9100251F25 /* AdvertisementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		B724970428226A5200251F25 /* CREAM */ = {
 			isa = PBXGroup;
 			children = (
+				B724972C2827DB4700251F25 /* Home */,
 				B72497292822702600251F25 /* TabBar */,
 				B724971E28226FD100251F25 /* ViewControllers */,
 				B724970528226A5200251F25 /* AppDelegate.swift */,
@@ -102,6 +105,14 @@
 				B724971C28226F0600251F25 /* MainTabBarViewController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B724972C2827DB4700251F25 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B724972D2827DB9100251F25 /* AdvertisementCell.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				B724970628226A5200251F25 /* AppDelegate.swift in Sources */,
 				B724971028226A5200251F25 /* CREAM.xcdatamodeld in Sources */,
 				B724972428226FEF00251F25 /* ShopViewController.swift in Sources */,
+				B724972E2827DB9100251F25 /* AdvertisementCell.swift in Sources */,
 				B724970828226A5200251F25 /* SceneDelegate.swift in Sources */,
 				B724972028226FE200251F25 /* HomeViewController.swift in Sources */,
 				B72497282822701000251F25 /* MyViewController.swift in Sources */,
