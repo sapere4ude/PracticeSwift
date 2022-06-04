@@ -17,6 +17,8 @@
 		B758D2C72848FC2B00221A99 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D2C62848FC2B00221A99 /* Article.swift */; };
 		B758D2CA2848FCD200221A99 /* ArticleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D2C92848FCD200221A99 /* ArticleService.swift */; };
 		B758D2CD284903B600221A99 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D2CC284903B600221A99 /* RootViewModel.swift */; };
+		B758D2D1284B573D00221A99 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D2D0284B573D00221A99 /* ArticleViewModel.swift */; };
+		B758D2D4284B5D6900221A99 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D2D3284B5D6900221A99 /* ArticleCell.swift */; };
 		BECF6BEF9976D99B6E0492A5 /* Pods_MVVMRxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3190585E0639A29AC844B260 /* Pods_MVVMRxSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		B758D2C62848FC2B00221A99 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		B758D2C92848FCD200221A99 /* ArticleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleService.swift; sourceTree = "<group>"; };
 		B758D2CC284903B600221A99 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		B758D2D0284B573D00221A99 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		B758D2D3284B5D6900221A99 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		F32EC71B21A04FA45760765F /* Pods-MVVMRxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMRxSwift.release.xcconfig"; path = "Target Support Files/Pods-MVVMRxSwift/Pods-MVVMRxSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,7 @@
 		B758D2A82848F8F200221A99 /* MVVMRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				B758D2D2284B5D4800221A99 /* Views */,
 				B758D2CB284903A400221A99 /* ViewModels */,
 				B758D2C82848FCC100221A99 /* Services */,
 				B758D2C52848FC1800221A99 /* Models */,
@@ -131,8 +136,17 @@
 			isa = PBXGroup;
 			children = (
 				B758D2CC284903B600221A99 /* RootViewModel.swift */,
+				B758D2D0284B573D00221A99 /* ArticleViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B758D2D2284B5D4800221A99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B758D2D3284B5D6900221A99 /* ArticleCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +269,9 @@
 				B758D2CA2848FCD200221A99 /* ArticleService.swift in Sources */,
 				B758D2AA2848F8F200221A99 /* AppDelegate.swift in Sources */,
 				B758D2C22848F99200221A99 /* RootViewController.swift in Sources */,
+				B758D2D1284B573D00221A99 /* ArticleViewModel.swift in Sources */,
 				B758D2CD284903B600221A99 /* RootViewModel.swift in Sources */,
+				B758D2D4284B5D6900221A99 /* ArticleCell.swift in Sources */,
 				B758D2AC2848F8F200221A99 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
