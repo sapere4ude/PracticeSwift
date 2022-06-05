@@ -7,9 +7,11 @@
 
 import UIKit
 import RxSwift
+import SDWebImage
 
 class ArticleCell: UICollectionViewCell {
     // MARK: Properties
+    let disposeBag = DisposeBag()
     var viewModel = PublishSubject<ArticleViewModel>()
     
     lazy var imageView: UIImageView = {
@@ -39,6 +41,7 @@ class ArticleCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
+        subscribe()
     }
     
     required init?(coder: NSCoder) {
@@ -47,7 +50,14 @@ class ArticleCell: UICollectionViewCell {
     
     // MARK: Helpers
     func subscribe() {
-        
+        self.viewModel.subscribe(onNext: { articleViewModel in
+            if let urlString = articleViewModel.imageURL {
+                self.imageView.sd_setImage(with: URL(string: urlString), completed: nil)
+            }
+            self.titleLabel.text = articleViewModel.title
+            self.descriptionLabel.text = articleViewModel.description
+            
+        }).disposed(by: disposeBag)
     }
     
     // MARK: Configures
