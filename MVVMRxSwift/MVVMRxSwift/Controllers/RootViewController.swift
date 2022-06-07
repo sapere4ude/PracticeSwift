@@ -24,7 +24,7 @@ class RootViewController: UIViewController {
         return cv
     }()
     
-    private let articleViewModel = BehaviorRelay<[ArticleViewModel]>(value: [])
+    private let articleViewModel = BehaviorRelay<[ArticleViewModel]>(value: []) // ~Relay 는 UI Event 에서 사용하기 적절하다
     var articleViewModelObsever: Observable<[ArticleViewModel]> {
         return articleViewModel.asObservable()
     }
@@ -50,6 +50,8 @@ class RootViewController: UIViewController {
     
     // MARK: Configures
     func configureUI() {
+        self.title = self.viewModel.title
+        
         view.backgroundColor = .systemBackground
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
