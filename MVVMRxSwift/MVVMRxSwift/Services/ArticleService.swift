@@ -10,7 +10,6 @@ import Alamofire
 import RxSwift
 
 
-// 튜토리얼 4 부터 시작
 protocol ArticleServiceProtocol {
     func fetchNews() -> Observable<[Article]>
 }
@@ -40,7 +39,7 @@ class ArticleService: ArticleServiceProtocol {
     }
     
     private func fetchNews(completion:@escaping((Error?, [Article]?) -> Void)) {
-        let urlString = "https://newsapi.org/v2/everything?q=tesla&from=2022-05-05&sortBy=publishedAt&apiKey=4927a1a645a249c489e248bf460cf4b4"
+        let urlString = "https://newsapi.org/v2/everything?q=tesla&from=2022-05-09&sortBy=publishedAt&apiKey=4927a1a645a249c489e248bf460cf4b4"
         guard let url = URL(string: urlString) else { return completion(NSError(domain: "jaejun", code: 404, userInfo: nil), nil)}
         
         AF.request(url, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default, headers: nil, interceptor: nil, requestModifier: nil).responseDecodable(of: ArticleResponse.self) { response in

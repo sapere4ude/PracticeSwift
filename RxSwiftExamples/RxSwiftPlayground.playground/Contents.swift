@@ -22,6 +22,12 @@ example(of: "subscribe") {
     let observable = Observable.of(one,two,three)
     
     observable.subscribe { event in
-        print(event)
+        //print(event) // next(1), next(3), next(3)
     }
+    
+    observable.subscribe(onNext: { element in
+        print(element) // 1, 2, 3
+    })
 }
+
+

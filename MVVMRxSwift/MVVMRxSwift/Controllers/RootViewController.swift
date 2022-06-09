@@ -70,7 +70,6 @@ class RootViewController: UIViewController {
         viewModel.fetchArticles().subscribe(onNext: { articleViewModel in
             self.articleViewModel.accept(articleViewModel)
         }).disposed(by: disposeBag)
-        
     }
     
     func subscribe() {

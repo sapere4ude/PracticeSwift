@@ -70,14 +70,14 @@ class ArticleCell: UICollectionViewCell {
         imageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
         
         addSubview(titleLabel)
-        titleLabel.translatesAutoresizingMaskIntoConstraints = true
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: imageView.rightAnchor, constant: 20).isActive = true
         titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -40).isActive = true
         
         addSubview(descriptionLabel)
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = true
-        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
         descriptionLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
         descriptionLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
     }
