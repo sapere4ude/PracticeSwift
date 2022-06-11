@@ -78,12 +78,12 @@
 				B758D35B285224A500221A99 /* AppDelegate.swift */,
 				B758D35D285224A500221A99 /* SceneDelegate.swift */,
 				B758D35F285224A500221A99 /* ViewController.swift */,
+				B758D3722852298800221A99 /* UserTableViewCell.swift */,
 				B758D361285224A500221A99 /* Main.storyboard */,
 				B758D367285224A600221A99 /* Assets.xcassets */,
 				B758D369285224A600221A99 /* LaunchScreen.storyboard */,
 				B758D36C285224A600221A99 /* Info.plist */,
 				B758D364285224A500221A99 /* MVVMApp.xcdatamodeld */,
-				B758D3722852298800221A99 /* UserTableViewCell.swift */,
 			);
 			path = MVVMApp;
 			sourceTree = "<group>";

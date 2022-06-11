@@ -13,12 +13,14 @@ class ViewController: UIViewController {
 
     private var viewModel = ViewModel()
     private var disposeBag = DisposeBag()
+    
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: self.view.frame, style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "UserTableViewCell")
         return tableView
     }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tableView)
@@ -40,7 +42,7 @@ extension ViewController: UITableViewDelegate {
 }
 
 class ViewModel {
-    var users = BehaviorSubject(value: [User]())
+    var users = BehaviorSubject(value: [User]()) // 가장 최신에 받은 next 이벤트를 전달받을 수 있다
     
     func fetchUser() {
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")
