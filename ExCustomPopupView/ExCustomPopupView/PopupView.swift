@@ -11,6 +11,8 @@ import SnapKit
 
 class PopupView: UIView {
     
+    var a: CGFloat = 0.0
+    
     let thumbnailImageView: UIImageView = {
             let thumbnail = UIImageView()
             thumbnail.layer.cornerRadius = 6
@@ -43,7 +45,7 @@ class PopupView: UIView {
         return title
     }()
 
-    let cancleButton: UIButton = {
+    let cancelButton: UIButton = {
         let more = UIButton()
         more.setTitle("버튼", for: .normal)
         more.backgroundColor = .green
@@ -140,12 +142,12 @@ class PopupView: UIView {
         joinButton.heightAnchor.constraint(equalToConstant: 23).isActive = true
         joinButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
 
-        self.addSubview(cancleButton)
-        cancleButton.translatesAutoresizingMaskIntoConstraints = false
-        cancleButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20).isActive = true
-        cancleButton.trailingAnchor.constraint(equalTo: self.joinButton.leadingAnchor, constant: -25).isActive = true
-        cancleButton.heightAnchor.constraint(equalToConstant: 23).isActive = true
-        cancleButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        self.addSubview(cancelButton)
+        cancelButton.translatesAutoresizingMaskIntoConstraints = false
+        cancelButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20).isActive = true
+        cancelButton.trailingAnchor.constraint(equalTo: self.joinButton.leadingAnchor, constant: -25).isActive = true
+        cancelButton.heightAnchor.constraint(equalToConstant: 23).isActive = true
+        cancelButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
         
         panGesture = UIPanGestureRecognizer(target: self, action: #selector(self.respondToPanGesture(_:)))
         self.addGestureRecognizer(panGesture)
@@ -171,6 +173,10 @@ class PopupView: UIView {
         
         bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -config.bottomSpace).isActive = true
         centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+    
+    override func layoutSubviews() {
+        a = self.frame.origin.y
     }
     
     required init?(coder: NSCoder) {
@@ -223,28 +229,29 @@ class PopupView: UIView {
     }
     
     @objc func respondToPanGesture(_ gesture: UIPanGestureRecognizer) {
-        print(#function)
-
-        let translation = gesture.translation(in: self) // translation에 움직인 위치를 저장한다.
-        // sender의 view는 sender가 바라보고 있는 circleView이다. 드래그로 이동한 만큼 circleView를 이동시킨다.
+        let viewTranslation = gesture.translation(in: self)
+        let viewVelocity = gesture.velocity(in: self)
         
-        gesture.view!.center = CGPoint(x: gesture.view!.center.x + translation.x, y: gesture.view!.center.y + translation.y)
-        gesture.setTranslation(.zero, in: self)
-
-        
-//        switch gesture.state {
-//            case .ended,
-//                 .cancelled,
-//                 .failed:
-//                 let trans = gesture.translation(in: self)
-//                if trans.y < 0 {
-//                    //                self.respondToSwipeUpGesture(gesture)
-//                } else {
-//                    self.dismiss()
-//                }
-//        default:
-//            return
-//        }
+        switch gesture.state {
+        case .changed:
+            if abs(viewVelocity.y) > abs(viewVelocity.x) {
+                if viewVelocity.y > 0 {
+                    UIView.animate(withDuration: 0.5) {
+                        self.transform = CGAffineTransform(translationX: 0, y: viewTranslation.y)
+                    }
+                }
+            }
+        case .ended:
+            if viewTranslation.y < 60 {
+                UIView.animate(withDuration: 0.5) {
+                    self.transform = .identity
+                }
+            } else {
+                dismiss()
+            }
+        default:
+            break
+        }
     }
 }
 
