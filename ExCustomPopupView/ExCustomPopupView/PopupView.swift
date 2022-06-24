@@ -195,18 +195,20 @@ class PopupView: UIView {
             return
         }
         
-        self.transform = .init(translationX: 0, y: self.config.bottomSpace)
-        UIView.animate(withDuration: duration) { [weak self] in
-            self?.alpha = 1
-            self?.isHidden = false
-            self?.transform = .init(translationX: 0, y: 0)
-        } completion: { _ in
-            guard self.config.autoDismiss else {
-                return
+        if Double.random(in: 0.0...100.0) < 30.0 {
+            self.transform = .init(translationX: 0, y: self.config.bottomSpace)
+            UIView.animate(withDuration: duration) { [weak self] in
+                self?.alpha = 1
+                self?.isHidden = false
+                self?.transform = .init(translationX: 0, y: 0)
+            } completion: { _ in
+                guard self.config.autoDismiss else {
+                    return
+                }
+                //            DispatchQueue.main.asyncAfter(deadline: .now() + self.config.autoDismissSeconds) {
+                //                self.dismiss()
+                //            }
             }
-//            DispatchQueue.main.asyncAfter(deadline: .now() + self.config.autoDismissSeconds) {
-//                self.dismiss()
-//            }
         }
     }
     
