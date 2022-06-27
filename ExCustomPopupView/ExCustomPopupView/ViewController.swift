@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnAction(_ sender: Any) {
-        PopupView(from: view).show()
+        PopupView.shared.show(vc: self)
     }
 }
 
