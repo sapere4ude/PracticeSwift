@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnAction(_ sender: Any) {
-        PopupView.shared.show(vc: self)
+//        PopupView.shared.show(vc: self)
+        VodPodUpView.shared.show(vc: self)
     }
 }
 

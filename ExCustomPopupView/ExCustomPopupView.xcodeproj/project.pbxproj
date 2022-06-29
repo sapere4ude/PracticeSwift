@@ -16,6 +16,7 @@
 		B72F9A8028609112003ECC9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B72F9A7F28609112003ECC9F /* Assets.xcassets */; };
 		B72F9A8328609112003ECC9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72F9A8128609112003ECC9F /* LaunchScreen.storyboard */; };
 		B72F9A8B2860A1B0003ECC9F /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F9A8A2860A1B0003ECC9F /* PopupView.swift */; };
+		B72F9ADD286C76DE003ECC9F /* VodPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F9ADC286C76DE003ECC9F /* VodPopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B72F9A8228609112003ECC9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B72F9A8428609112003ECC9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B72F9A8A2860A1B0003ECC9F /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		B72F9ADC286C76DE003ECC9F /* VodPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodPopupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				B72F9A8A2860A1B0003ECC9F /* PopupView.swift */,
 				B72F9A7928609111003ECC9F /* Main.storyboard */,
 				B72F9A7F28609112003ECC9F /* Assets.xcassets */,
+				B72F9ADC286C76DE003ECC9F /* VodPopupView.swift */,
 				B72F9A8128609112003ECC9F /* LaunchScreen.storyboard */,
 				B72F9A8428609112003ECC9F /* Info.plist */,
 				B72F9A7C28609111003ECC9F /* ExCustomPopupView.xcdatamodeld */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B72F9A7828609111003ECC9F /* ViewController.swift in Sources */,
+				B72F9ADD286C76DE003ECC9F /* VodPopupView.swift in Sources */,
 				B72F9A7E28609111003ECC9F /* ExCustomPopupView.xcdatamodeld in Sources */,
 				B72F9A7428609111003ECC9F /* AppDelegate.swift in Sources */,
 				B72F9A8B2860A1B0003ECC9F /* PopupView.swift in Sources */,

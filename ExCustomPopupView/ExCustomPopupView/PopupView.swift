@@ -249,7 +249,7 @@ import SnapKit
             return
         }
         
-        vc.view.addSubview(self)
+        vc.view.addSubview(self) // <- 이 코드가 실행되면 init(frame:CGRect) 함수가 실행된다. 그렇게 frame 을 설정해주고 아랫줄로 넘어가게된다.
         setupConstraints(superView: vc.view)
 
         guard self.isShow == false else { return }
