@@ -16,6 +16,9 @@
 		B7C1E432287017D50040ADDE /* ExProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E431287017D50040ADDE /* ExProtocolTests.swift */; };
 		B7C1E43C287017D50040ADDE /* ExProtocolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E43B287017D50040ADDE /* ExProtocolUITests.swift */; };
 		B7C1E43E287017D50040ADDE /* ExProtocolUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E43D287017D50040ADDE /* ExProtocolUITestsLaunchTests.swift */; };
+		B7C1E44B287129AC0040ADDE /* Greet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E44A287129AC0040ADDE /* Greet.swift */; };
+		B7C1E44D287129C60040ADDE /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E44C287129C60040ADDE /* Polygon.swift */; };
+		B7C1E44F28712B130040ADDE /* MultipleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C1E44E28712B130040ADDE /* MultipleProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		B7C1E437287017D50040ADDE /* ExProtocolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExProtocolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C1E43B287017D50040ADDE /* ExProtocolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExProtocolUITests.swift; sourceTree = "<group>"; };
 		B7C1E43D287017D50040ADDE /* ExProtocolUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExProtocolUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7C1E44A287129AC0040ADDE /* Greet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Greet.swift; sourceTree = "<group>"; };
+		B7C1E44C287129C60040ADDE /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
+		B7C1E44E28712B130040ADDE /* MultipleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				B7C1E423287017D50040ADDE /* Assets.xcassets */,
 				B7C1E425287017D50040ADDE /* LaunchScreen.storyboard */,
 				B7C1E428287017D50040ADDE /* Info.plist */,
+				B7C1E44A287129AC0040ADDE /* Greet.swift */,
+				B7C1E44C287129C60040ADDE /* Polygon.swift */,
+				B7C1E44E28712B130040ADDE /* MultipleProtocols.swift */,
 			);
 			path = ExProtocol;
 			sourceTree = "<group>";
@@ -259,6 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7C1E41F287017D40040ADDE /* ViewController.swift in Sources */,
+				B7C1E44D287129C60040ADDE /* Polygon.swift in Sources */,
+				B7C1E44B287129AC0040ADDE /* Greet.swift in Sources */,
+				B7C1E44F28712B130040ADDE /* MultipleProtocols.swift in Sources */,
 				B7C1E41B287017D40040ADDE /* AppDelegate.swift in Sources */,
 				B7C1E41D287017D40040ADDE /* SceneDelegate.swift in Sources */,
 			);
