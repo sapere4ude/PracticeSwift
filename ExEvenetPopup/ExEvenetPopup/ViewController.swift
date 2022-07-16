@@ -5,78 +5,54 @@
 //  Created by Kant on 2022/07/13.
 //
 
+// 이벤트를 보여주는 뷰
+// 오픈했을때 어떤 방식으로 보여줄지
+// 하루에 한번만 보여주도록, 00시 될때 초기화
+
+
+
 import UIKit
 
 class ViewController: UIViewController {
 
     let button: UIButton = {
         let button = UIButton()
+        button.setTitle("클릭해주세요", for: .normal)
         button.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+        button.backgroundColor = .green
         return button
+    }()
+    
+    let eventView: UIView = {
+       let eventView = UIView()
+        eventView.backgroundColor = .yellow
+        eventView.translatesAutoresizingMaskIntoConstraints = false
+        return eventView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(button)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            button.widthAnchor.constraint(equalToConstant: 150),
+            button.heightAnchor.constraint(equalToConstant: 40),
+            button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
     }
 
     @objc func btnAction() {
-        
+        print(#function)
+        view.addSubview(eventView)
+        eventView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            eventView.widthAnchor.constraint(equalToConstant: 300),
+            eventView.heightAnchor.constraint(equalToConstant: 300),
+            eventView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            eventView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
     }
-}
-
-func popUpControl() {
-    //[저장 날짜 로드]
-    let prefs = UserDefaults.standard
-    // getting an NSString
-    let saveDate = prefs.string(forKey: "popUpDate")
-    print("PopUpControl(myString): \(saveDate ?? "")")
-
-
-    //[오늘 날짜 구하기]
-    var dateValue = ""
-    let formatter = DateFormatter()
-    let now = Date()
-    //[formatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
-    formatter.dateFormat = "yyyy-mm-dd"
-    dateValue = formatter.string(from: now)
-    UserDefaults.standard.string(forKey: dateValue)
-    print("PopUpControl(dateValue): \(dateValue)")
-
-
-    //[날짜 비교]
-    //NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    //[dateFormatter setDateFormat:@"yyyy-mm-dd"];
-    let updateDate = formatter.date(from: dateValue)
-    if let updateDate = updateDate {
-        print("PopUpControl(updateDate): \(updateDate)")
-    }
-    let date = formattedDateCompare(toNow: updateDate)
-    if let date = date {
-        print("PopUpControl(date): \(date)")
-    }
-
-
-    //[기존 날짜 저장해서 내일 날짜랑 비교]
-    if saveDate == nil {
-        eventPopup()
-    } else if Int(date ?? 0) < 0 {
-        eventPopup()
-    } else if IntegerLiteralConvertible(date ?? 0) == 0 {
-        dismiss(animated: false)
-    }
-}
-
-func formattedDateCompare(toNow date: Date?) -> Int {
-    let yMd = DateFormatter()
-    yMd.dateFormat = "yyyy-MM-dd"
-
-    var midnight: Date? = nil
-    if let date = date {
-        midnight = yMd.date(from: yMd.string(from: date))
-    }
-    let dayDiff = Int(midnight?.timeIntervalSinceNow ?? 0) / (60 * 60 * 24)
-
-    //음수 양수 변환
-    return -dayDiff //+ 1;
 }
