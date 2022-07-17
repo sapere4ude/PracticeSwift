@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 class EventView: UIView {
+    
+    static var shared = EventView()
+    
     var isShow: Bool = false
     private var dismissAction: (() -> Void)?
     private var tapAction: (() -> Void)?
@@ -20,32 +23,50 @@ class EventView: UIView {
         imgView.layer.cornerRadius = 10
         imgView.clipsToBounds = true
         imgView.translatesAutoresizingMaskIntoConstraints = false
+        imgView.backgroundColor = .red
         return imgView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupConstraints() {
+    // MARK: - setup Constraints
+    private func setupConstraints(superView view: UIView) {
+        print(#function)
+        
+        addSubview(imageView)
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        // 이게 있어야 전체 뷰(bgView)의 위치가 잡아지면서, 위에 올라와 있는 뷰들도 자리가 잡힌다.
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            topAnchor.constraint(equalTo: view.topAnchor, constant: -view.frame.height),
+            leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            imageView.widthAnchor.constraint(equalToConstant: 300),
+            imageView.heightAnchor.constraint(equalToConstant: 300),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
     
-    func show(vc: UIViewController, withDuration duration: Double = 1.5, onTapAction: (() -> Void)? = nil, onDismiss: (() -> Void)? = nil) {
+    
+    func show(vc: UIViewController, withDuration duration: Double = 1.0, onTapAction: (() -> Void)? = nil, onDismiss: (() -> Void)? = nil) {
         tapAction = onTapAction
         dismissAction = onDismiss
         self.autoDismiss = true
         self.autoDismissSeconds = 2
+        
+        vc.view.addSubview(self)
+        setupConstraints(superView: vc.view)
         
         guard duration != 0 else {
             alpha = 1

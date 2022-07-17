@@ -46,13 +46,14 @@ class ViewController: UIViewController {
 
     @objc func btnAction() {
         print(#function)
-        view.addSubview(eventView)
-        eventView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            eventView.widthAnchor.constraint(equalToConstant: 300),
-            eventView.heightAnchor.constraint(equalToConstant: 300),
-            eventView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            eventView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
-        ])
+//        view.addSubview(eventView)
+//        eventView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            eventView.widthAnchor.constraint(equalToConstant: 300),
+//            eventView.heightAnchor.constraint(equalToConstant: 300),
+//            eventView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+//            eventView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+//        ])
+        EventView.shared.show(vc: self)
     }
 }
