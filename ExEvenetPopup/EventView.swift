@@ -27,6 +27,17 @@ class EventView: UIView {
         return imgView
     }()
     
+    let exitBtn: UIButton = {
+       let button = UIButton()
+        button.setTitle("다음에 다시보기 5", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        button.backgroundColor = UIColor.darkGray.withAlphaComponent(0.2)
+        button.layer.cornerRadius = 5
+        button.clipsToBounds = true
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -40,7 +51,11 @@ class EventView: UIView {
         print(#function)
         
         addSubview(imageView)
+        imageView.addSubview(exitBtn)
+        
         translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        exitBtn.translatesAutoresizingMaskIntoConstraints = false
         
         // 이게 있어야 전체 뷰(bgView)의 위치가 잡아지면서, 위에 올라와 있는 뷰들도 자리가 잡힌다.
         NSLayoutConstraint.activate([
@@ -55,6 +70,13 @@ class EventView: UIView {
             imageView.heightAnchor.constraint(equalToConstant: 300),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            exitBtn.widthAnchor.constraint(equalToConstant: 100),
+            exitBtn.heightAnchor.constraint(equalToConstant: 30),
+            exitBtn.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -10),
+            exitBtn.topAnchor.constraint(equalTo: imageView.topAnchor, constant: 10)
         ])
     }
     
