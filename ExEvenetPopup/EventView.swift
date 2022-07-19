@@ -23,7 +23,7 @@ class EventView: UIView {
         imgView.layer.cornerRadius = 10
         imgView.clipsToBounds = true
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.backgroundColor = .red
+        imgView.backgroundColor = .blue
         return imgView
     }()
     
