@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B715BBF2288F5BA700CFBAAE /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B715BBF1288F5BA700CFBAAE /* MusicListViewController.swift */; };
 		B7A60313288CDABA00A035DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A60312288CDABA00A035DE /* AppDelegate.swift */; };
 		B7A60315288CDABA00A035DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A60314288CDABA00A035DE /* SceneDelegate.swift */; };
 		B7A60317288CDABA00A035DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A60316288CDABA00A035DE /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B715BBF1288F5BA700CFBAAE /* MusicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
 		B7A6030F288CDABA00A035DE /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A60312288CDABA00A035DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A60314288CDABA00A035DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				B7A60312288CDABA00A035DE /* AppDelegate.swift */,
 				B7A60314288CDABA00A035DE /* SceneDelegate.swift */,
 				B7A60316288CDABA00A035DE /* ViewController.swift */,
+				B715BBF1288F5BA700CFBAAE /* MusicListViewController.swift */,
 				B7A60329288CDADB00A035DE /* MusicPlayer.swift */,
 				B7A60318288CDABA00A035DE /* Main.storyboard */,
 				B7A6031E288CDABB00A035DE /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				B7A60317288CDABA00A035DE /* ViewController.swift in Sources */,
 				B7A60313288CDABA00A035DE /* AppDelegate.swift in Sources */,
+				B715BBF2288F5BA700CFBAAE /* MusicListViewController.swift in Sources */,
 				B7A6031D288CDABA00A035DE /* MusicPlayer.xcdatamodeld in Sources */,
 				B7A6032A288CDADB00A035DE /* MusicPlayer.swift in Sources */,
 				B7A60315288CDABA00A035DE /* SceneDelegate.swift in Sources */,
