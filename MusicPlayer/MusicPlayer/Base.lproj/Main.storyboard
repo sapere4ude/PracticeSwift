@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="emk-Ty-XlI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="owL-iX-ud6">
+            <objects>
+                <tabBarController id="emk-Ty-XlI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sKt-06-3Fe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemRedColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ikp-tn-ZhN" kind="relationship" relationship="viewControllers" id="y80-a1-Dbk"/>
+                        <segue destination="Ncv-r9-9u8" kind="relationship" relationship="viewControllers" id="jFO-HA-Y0U"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfn-00-N6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="533" y="-314"/>
+        </scene>
+        <!--뮤직리스트-->
+        <scene sceneID="tLi-fE-lo0">
+            <objects>
+                <navigationController id="ikp-tn-ZhN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="뮤직리스트" image="homekit" catalog="system" id="vUp-R5-0VJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GyK-Xz-IiG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2sl-hu-i8f" kind="relationship" relationship="rootViewController" id="S2J-Ut-ioz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beY-tl-7T6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="398"/>
+        </scene>
+        <!--Music List View Controller-->
+        <scene sceneID="QMJ-Kp-vuR">
+            <objects>
+                <viewController id="2sl-hu-i8f" customClass="MusicListViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-0S-Q7o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cp1-hK-zfO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="omT-9Y-sFh"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="omT-9Y-sFh" firstAttribute="trailing" secondItem="cp1-hK-zfO" secondAttribute="trailing" id="1dX-qc-2YF"/>
+                            <constraint firstItem="cp1-hK-zfO" firstAttribute="leading" secondItem="omT-9Y-sFh" secondAttribute="leading" id="GZA-bQ-4ys"/>
+                            <constraint firstItem="omT-9Y-sFh" firstAttribute="bottom" secondItem="cp1-hK-zfO" secondAttribute="bottom" id="czf-SG-u56"/>
+                            <constraint firstAttribute="top" secondItem="cp1-hK-zfO" secondAttribute="top" id="jnC-ZQ-lH7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eKa-YG-tzp"/>
+                    <connections>
+                        <outlet property="musicTableView" destination="cp1-hK-zfO" id="tYo-G3-lGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xs-FJ-inK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="1065"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zMh-oL-eja">
+            <objects>
+                <viewController id="v7X-8P-Sso" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4a-TL-dLO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wj7-QJ-hQ1">
+                                <rect key="frame" x="87" y="192" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q3K-zi-cOU"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tPM-kl-o60"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3B-ww-Ttw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="1065"/>
+        </scene>
+        <!--플레이어-->
+        <scene sceneID="6WL-bE-Lh8">
+            <objects>
+                <navigationController id="Ncv-r9-9u8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="플레이어" image="music.note.list" catalog="system" id="IIN-u2-xUh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3xg-Fi-rdo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v7X-8P-Sso" kind="relationship" relationship="rootViewController" id="aKr-HQ-J16"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fc-M5-F4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901" y="398"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="music.note.list" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
