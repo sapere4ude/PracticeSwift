@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-ExWebpTest-ExWebpTestUITests/Pods-ExWebpTest-ExWebpTestUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImageWebPCoder/SDWebImageWebPCoder.framework
+${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework

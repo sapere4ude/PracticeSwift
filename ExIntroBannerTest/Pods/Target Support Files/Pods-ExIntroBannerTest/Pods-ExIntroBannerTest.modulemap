@@ -1,0 +1,6 @@
+framework module Pods_ExIntroBannerTest {
+  umbrella header "Pods-ExIntroBannerTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
