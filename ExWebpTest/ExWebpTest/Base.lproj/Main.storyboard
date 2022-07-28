@@ -17,25 +17,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SkK-fw-qld">
-                                <rect key="frame" x="87" y="321" width="240" height="128"/>
+                                <rect key="frame" x="42" y="67" width="330" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="Rfk-T4-78Y"/>
+                                    <constraint firstAttribute="height" constant="279" id="dgZ-2k-VaC"/>
+                                </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xGq-Xx-sQs">
+                                <rect key="frame" x="42" y="476" width="330" height="345"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6O-OZ-iaM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="343"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SkK-fw-qld" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="277" id="2Oe-v4-dtC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SkK-fw-qld" secondAttribute="bottom" constant="413" id="CuW-5k-s4S"/>
-                            <constraint firstItem="SkK-fw-qld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="P9y-Jc-RVf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SkK-fw-qld" secondAttribute="trailing" constant="87" id="QVu-8a-7hE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xGq-Xx-sQs" secondAttribute="bottom" constant="41" id="7Je-Cn-XYO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x6O-OZ-iaM" secondAttribute="bottom" constant="475" id="9EF-GD-DZu"/>
+                            <constraint firstItem="x6O-OZ-iaM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BTd-bL-2wr"/>
+                            <constraint firstItem="xGq-Xx-sQs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="432" id="DrZ-5m-trV"/>
+                            <constraint firstItem="xGq-Xx-sQs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="ECh-gk-lAv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x6O-OZ-iaM" secondAttribute="trailing" id="aJ7-he-ngt"/>
+                            <constraint firstItem="SkK-fw-qld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="bYB-Ck-RnR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xGq-Xx-sQs" secondAttribute="trailing" constant="42" id="ul7-TT-3V6"/>
+                            <constraint firstItem="x6O-OZ-iaM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vet-z5-yxu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SkK-fw-qld" secondAttribute="trailing" constant="42" id="wdp-0D-v1B"/>
+                            <constraint firstItem="SkK-fw-qld" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="x68-rP-kBc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="SkK-fw-qld" id="1Ic-cW-P66"/>
+                        <outlet property="imageView2" destination="xGq-Xx-sQs" id="Hpi-QL-lSX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="131"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="130.58035714285714"/>
         </scene>
     </scenes>
     <resources>

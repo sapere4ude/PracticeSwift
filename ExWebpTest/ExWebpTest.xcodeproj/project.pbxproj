@@ -19,6 +19,7 @@
 		B71054D6288E2E8B00F61943 /* ExWebpTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71054D5288E2E8B00F61943 /* ExWebpTestTests.swift */; };
 		B71054E0288E2E8B00F61943 /* ExWebpTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71054DF288E2E8B00F61943 /* ExWebpTestUITests.swift */; };
 		B71054E2288E2E8B00F61943 /* ExWebpTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71054E1288E2E8B00F61943 /* ExWebpTestUITestsLaunchTests.swift */; };
+		B7F3A72228926CA9003D2ECF /* webpTest.webp in Resources */ = {isa = PBXBuildFile; fileRef = B7F3A72028926C45003D2ECF /* webpTest.webp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		B71054DF288E2E8B00F61943 /* ExWebpTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExWebpTestUITests.swift; sourceTree = "<group>"; };
 		B71054E1288E2E8B00F61943 /* ExWebpTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExWebpTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B71054EE288E30F700F61943 /* test.webp */ = {isa = PBXFileReference; lastKnownFileType = file; name = test.webp; path = ../../../../Downloads/test.webp; sourceTree = "<group>"; };
+		B7F3A72028926C45003D2ECF /* webpTest.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = webpTest.webp; sourceTree = "<group>"; };
 		BAA742680878B947274B365B /* Pods-ExWebpTest-ExWebpTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExWebpTest-ExWebpTestUITests.release.xcconfig"; path = "Target Support Files/Pods-ExWebpTest-ExWebpTestUITests/Pods-ExWebpTest-ExWebpTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D3170537F66B3ADA67B8E2E5 /* Pods-ExWebpTest-ExWebpTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExWebpTest-ExWebpTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExWebpTest-ExWebpTestUITests/Pods-ExWebpTest-ExWebpTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4671595B1BFAA69F700D088 /* Pods-ExWebpTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExWebpTest.debug.xcconfig"; path = "Target Support Files/Pods-ExWebpTest/Pods-ExWebpTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,9 +104,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B70E4D8328922561003C7E04 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B7F3A72028926C45003D2ECF /* webpTest.webp */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		B71054B2288E2E8900F61943 = {
 			isa = PBXGroup;
 			children = (
+				B70E4D8328922561003C7E04 /* Resource */,
 				B71054BD288E2E8900F61943 /* ExWebpTest */,
 				B71054D4288E2E8B00F61943 /* ExWebpTestTests */,
 				B71054DE288E2E8B00F61943 /* ExWebpTestUITests */,
@@ -278,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F3A72228926CA9003D2ECF /* webpTest.webp in Resources */,
 				B71054CB288E2E8B00F61943 /* LaunchScreen.storyboard in Resources */,
 				B71054C8288E2E8B00F61943 /* Assets.xcassets in Resources */,
 				B71054C6288E2E8900F61943 /* Main.storyboard in Resources */,

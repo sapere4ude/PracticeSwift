@@ -1,4 +1,8 @@
 PODS:
+  - Kingfisher (7.3.0)
+  - KingfisherWebP (1.4.0):
+    - Kingfisher (~> 7.0)
+    - libwebp (>= 1.1.0)
   - libwebp (1.2.1):
     - libwebp/demux (= 1.2.1)
     - libwebp/mux (= 1.2.1)
@@ -14,19 +18,25 @@ PODS:
     - SDWebImage/Core (~> 5.13)
 
 DEPENDENCIES:
+  - Kingfisher
+  - KingfisherWebP
   - SDWebImageWebPCoder
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
+    - KingfisherWebP
     - libwebp
     - SDWebImage
     - SDWebImageWebPCoder
 
 SPEC CHECKSUMS:
+  Kingfisher: cdb1189a9223b1bc028816bd47c8b8101a58831c
+  KingfisherWebP: f4b76064c50a36c4cadd37548496ecebfdcb39e8
   libwebp: 98a37e597e40bfdb4c911fc98f2c53d0b12d05fc
   SDWebImage: 72f86271a6f3139cc7e4a89220946489d4b9a866
   SDWebImageWebPCoder: 3dc350894112feab5375cfba9ce0986544a66a69
 
-PODFILE CHECKSUM: f7930c0ff7b6f97520f1448a009d916dd0677304
+PODFILE CHECKSUM: 72f920e32bfc921ae032111c51787bcd51328490
 
 COCOAPODS: 1.11.3

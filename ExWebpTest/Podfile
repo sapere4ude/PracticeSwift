@@ -7,7 +7,8 @@ target 'ExWebpTest' do
 
   # Pods for ExWebpTest
   pod 'SDWebImageWebPCoder'
-
+  pod 'Kingfisher'#, '~> 5.0'
+  pod "KingfisherWebP"
   target 'ExWebpTestTests' do
     inherit! :search_paths
     # Pods for testing
