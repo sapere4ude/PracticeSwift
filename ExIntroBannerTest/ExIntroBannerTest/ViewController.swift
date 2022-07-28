@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     var okBtn: UIButton = {
         let button = UIButton()
         button.backgroundColor = .magenta
-        button.setTitle("예약하기", for: .normal)
+        button.setTitle("예매하기", for: .normal)
         return button
     }()
     
@@ -55,35 +55,46 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(backgroundView)
+        
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: view.topAnchor, constant: -view.frame.height),
+            view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        view.addSubview(backgroundView)
         backgroundView.snp.makeConstraints {
             $0.leading.equalTo(self.view.snp_leading)
             $0.trailing.equalTo(self.view.snp_trailing)
             $0.top.equalTo(self.view.snp_top)
             $0.bottom.equalTo(self.view.snp_bottom)
         }
+        
         backgroundView.addSubview(contentsView)
         contentsView.snp.makeConstraints {
             $0.width.equalTo(backgroundView)
-            $0.height.equalTo(300)
-            $0.bottom.equalTo(okBtn.snp_bottom).offset(-20) // 여기서 오류나고있음 해결필요
-//            $0.bottom.equalToSuperview().offset(-30) // 정상동작하는거
+            $0.height.equalTo(200)
+            $0.bottom.equalToSuperview().offset(-100) // 정상동작하는거
         }
         
         // imageTypeUI
-        imageView.snp.makeConstraints {
-            $0.height.equalTo(200)
-        }
+//        imageView.snp.makeConstraints {
+//            $0.height.equalTo(100)
+//        }
+        
+        
+        // stackView 쌓기
         [imageView].forEach {
             contentsView.addArrangedSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
         // VodTypeUI
-        [imageView].forEach {
-            contentsView.addArrangedSubview($0)
-            $0.translatesAutoresizingMaskIntoConstraints = false
-        }
+//        [imageView].forEach {
+//            contentsView.addArrangedSubview($0)
+//            $0.translatesAutoresizingMaskIntoConstraints = false
+//        }
         
         // VodTypeWithCinemaUI
         
@@ -93,11 +104,7 @@ class ViewController: UIViewController {
         backgroundView.addSubview(okBtn)
         okBtn.snp.makeConstraints {
             $0.centerX.equalTo(backgroundView)
-//            $0.centerY.equalTo(backgroundView)
-//            $0.bottom.equalTo(backgroundView.snp_bottom).offset(10)
-//            $0.height.equalTo(35)
-//            $0.bottom.equalTo(backgroundView.snp_bottom).offset(200)
-            $0.bottom.equalToSuperview().offset(-30)
+            $0.bottom.equalTo(backgroundView.snp_bottom).offset(-30)
         }
         
         backgroundView.addSubview(exitBtn)
@@ -113,6 +120,17 @@ class ViewController: UIViewController {
             $0.width.equalTo(50)
             $0.trailing.equalTo(self.backgroundView.snp_trailing).offset(-30)
             $0.bottom.equalTo(self.backgroundView.snp_bottom).offset(-20)
+        }
+        
+        show()
+    }
+    
+    func show() {
+        view.transform = .init(translationX: 0, y: UIScreen.main.bounds.height)
+        UIView.animate(withDuration: 1.0) { [weak self] in
+            self?.view.transform = .init(translationX: 0, y: 0)
+        } completion: { _ in
+            
         }
     }
 }
