@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - TodoElement
-struct TodoElement: Codable {
+struct Todo: Codable {
     let userID, id: Int
     let title: String
     let completed: Bool
@@ -18,5 +18,3 @@ struct TodoElement: Codable {
         case id, title, completed
     }
 }
-
-typealias Todo = [TodoElement]

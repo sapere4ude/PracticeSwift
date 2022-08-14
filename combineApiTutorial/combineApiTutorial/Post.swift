@@ -5,7 +5,7 @@
 //  Created by Kant on 2022/08/13.
 //
 
-struct PostElement: Codable {
+struct Post: Codable {
     let userID, id: Int
     let title, body: String
 
@@ -14,3 +14,4 @@ struct PostElement: Codable {
         case id, title, body
     }
 }
+

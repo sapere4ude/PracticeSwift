@@ -16,6 +16,8 @@
 		B75DC2F028A78C0E0066D443 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DC2EF28A78C0E0066D443 /* Todo.swift */; };
 		B75DC2F228A78C3E0066D443 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DC2F128A78C3E0066D443 /* Post.swift */; };
 		B75DC2F428A78C550066D443 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DC2F328A78C550066D443 /* ApiService.swift */; };
+		B75DC2F628A78ED00066D443 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DC2F528A78ED00066D443 /* ViewModel.swift */; };
+		B75DC2F828A88CE40066D443 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75DC2F728A88CE40066D443 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		B75DC2EF28A78C0E0066D443 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		B75DC2F128A78C3E0066D443 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B75DC2F328A78C550066D443 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		B75DC2F528A78ED00066D443 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B75DC2F728A88CE40066D443 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				B75DC2EF28A78C0E0066D443 /* Todo.swift */,
 				B75DC2F128A78C3E0066D443 /* Post.swift */,
 				B75DC2F328A78C550066D443 /* ApiService.swift */,
+				B75DC2F528A78ED00066D443 /* ViewModel.swift */,
+				B75DC2F728A88CE40066D443 /* User.swift */,
 			);
 			path = combineApiTutorial;
 			sourceTree = "<group>";
@@ -157,7 +163,9 @@
 				B75DC2E928A78A160066D443 /* combineApiTutorial.xcdatamodeld in Sources */,
 				B75DC2F228A78C3E0066D443 /* Post.swift in Sources */,
 				B75DC2DD28A78A140066D443 /* combineApiTutorialApp.swift in Sources */,
+				B75DC2F828A88CE40066D443 /* User.swift in Sources */,
 				B75DC2F428A78C550066D443 /* ApiService.swift in Sources */,
+				B75DC2F628A78ED00066D443 /* ViewModel.swift in Sources */,
 				B75DC2F028A78C0E0066D443 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
