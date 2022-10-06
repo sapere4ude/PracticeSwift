@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B7EC261E28E685C5000658FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC261D28E685C5000658FA /* AppDelegate.swift */; };
+		B7EC262028E685C5000658FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC261F28E685C5000658FA /* SceneDelegate.swift */; };
+		B7EC262228E685C5000658FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC262128E685C5000658FA /* ViewController.swift */; };
+		B7EC262528E685C5000658FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EC262328E685C5000658FA /* Main.storyboard */; };
+		B7EC262728E685CB000658FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7EC262628E685CB000658FA /* Assets.xcassets */; };
+		B7EC262A28E685CB000658FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EC262828E685CB000658FA /* LaunchScreen.storyboard */; };
+		B7EC263528E685CB000658FA /* ExCenterCropImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC263428E685CB000658FA /* ExCenterCropImageTests.swift */; };
+		B7EC263F28E685CB000658FA /* ExCenterCropImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC263E28E685CB000658FA /* ExCenterCropImageUITests.swift */; };
+		B7EC264128E685CB000658FA /* ExCenterCropImageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC264028E685CB000658FA /* ExCenterCropImageUITestsLaunchTests.swift */; };
+		B7EC264E28E68777000658FA /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = B7EC264D28E68777000658FA /* sample.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7EC263128E685CB000658FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7EC261228E685C5000658FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7EC261928E685C5000658FA;
+			remoteInfo = ExCenterCropImage;
+		};
+		B7EC263B28E685CB000658FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7EC261228E685C5000658FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7EC261928E685C5000658FA;
+			remoteInfo = ExCenterCropImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B7EC261A28E685C5000658FA /* ExCenterCropImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExCenterCropImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7EC261D28E685C5000658FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7EC261F28E685C5000658FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B7EC262128E685C5000658FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7EC262428E685C5000658FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7EC262628E685CB000658FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7EC262928E685CB000658FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7EC262B28E685CB000658FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7EC263028E685CB000658FA /* ExCenterCropImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExCenterCropImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7EC263428E685CB000658FA /* ExCenterCropImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCenterCropImageTests.swift; sourceTree = "<group>"; };
+		B7EC263A28E685CB000658FA /* ExCenterCropImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExCenterCropImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7EC263E28E685CB000658FA /* ExCenterCropImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCenterCropImageUITests.swift; sourceTree = "<group>"; };
+		B7EC264028E685CB000658FA /* ExCenterCropImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCenterCropImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7EC264D28E68777000658FA /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7EC261728E685C5000658FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EC262D28E685CB000658FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EC263728E685CB000658FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7EC261128E685C5000658FA = {
+			isa = PBXGroup;
+			children = (
+				B7EC261C28E685C5000658FA /* ExCenterCropImage */,
+				B7EC263328E685CB000658FA /* ExCenterCropImageTests */,
+				B7EC263D28E685CB000658FA /* ExCenterCropImageUITests */,
+				B7EC261B28E685C5000658FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7EC261B28E685C5000658FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7EC261A28E685C5000658FA /* ExCenterCropImage.app */,
+				B7EC263028E685CB000658FA /* ExCenterCropImageTests.xctest */,
+				B7EC263A28E685CB000658FA /* ExCenterCropImageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7EC261C28E685C5000658FA /* ExCenterCropImage */ = {
+			isa = PBXGroup;
+			children = (
+				B7EC261D28E685C5000658FA /* AppDelegate.swift */,
+				B7EC261F28E685C5000658FA /* SceneDelegate.swift */,
+				B7EC262128E685C5000658FA /* ViewController.swift */,
+				B7EC262328E685C5000658FA /* Main.storyboard */,
+				B7EC264D28E68777000658FA /* sample.png */,
+				B7EC262628E685CB000658FA /* Assets.xcassets */,
+				B7EC262828E685CB000658FA /* LaunchScreen.storyboard */,
+				B7EC262B28E685CB000658FA /* Info.plist */,
+			);
+			path = ExCenterCropImage;
+			sourceTree = "<group>";
+		};
+		B7EC263328E685CB000658FA /* ExCenterCropImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7EC263428E685CB000658FA /* ExCenterCropImageTests.swift */,
+			);
+			path = ExCenterCropImageTests;
+			sourceTree = "<group>";
+		};
+		B7EC263D28E685CB000658FA /* ExCenterCropImageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B7EC263E28E685CB000658FA /* ExCenterCropImageUITests.swift */,
+				B7EC264028E685CB000658FA /* ExCenterCropImageUITestsLaunchTests.swift */,
+			);
+			path = ExCenterCropImageUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7EC261928E685C5000658FA /* ExCenterCropImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7EC264428E685CB000658FA /* Build configuration list for PBXNativeTarget "ExCenterCropImage" */;
+			buildPhases = (
+				B7EC261628E685C5000658FA /* Sources */,
+				B7EC261728E685C5000658FA /* Frameworks */,
+				B7EC261828E685C5000658FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExCenterCropImage;
+			productName = ExCenterCropImage;
+			productReference = B7EC261A28E685C5000658FA /* ExCenterCropImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B7EC262F28E685CB000658FA /* ExCenterCropImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7EC264728E685CB000658FA /* Build configuration list for PBXNativeTarget "ExCenterCropImageTests" */;
+			buildPhases = (
+				B7EC262C28E685CB000658FA /* Sources */,
+				B7EC262D28E685CB000658FA /* Frameworks */,
+				B7EC262E28E685CB000658FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7EC263228E685CB000658FA /* PBXTargetDependency */,
+			);
+			name = ExCenterCropImageTests;
+			productName = ExCenterCropImageTests;
+			productReference = B7EC263028E685CB000658FA /* ExCenterCropImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7EC263928E685CB000658FA /* ExCenterCropImageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7EC264A28E685CB000658FA /* Build configuration list for PBXNativeTarget "ExCenterCropImageUITests" */;
+			buildPhases = (
+				B7EC263628E685CB000658FA /* Sources */,
+				B7EC263728E685CB000658FA /* Frameworks */,
+				B7EC263828E685CB000658FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7EC263C28E685CB000658FA /* PBXTargetDependency */,
+			);
+			name = ExCenterCropImageUITests;
+			productName = ExCenterCropImageUITests;
+			productReference = B7EC263A28E685CB000658FA /* ExCenterCropImageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7EC261228E685C5000658FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					B7EC261928E685C5000658FA = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B7EC262F28E685CB000658FA = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B7EC261928E685C5000658FA;
+					};
+					B7EC263928E685CB000658FA = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B7EC261928E685C5000658FA;
+					};
+				};
+			};
+			buildConfigurationList = B7EC261528E685C5000658FA /* Build configuration list for PBXProject "ExCenterCropImage" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7EC261128E685C5000658FA;
+			productRefGroup = B7EC261B28E685C5000658FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7EC261928E685C5000658FA /* ExCenterCropImage */,
+				B7EC262F28E685CB000658FA /* ExCenterCropImageTests */,
+				B7EC263928E685CB000658FA /* ExCenterCropImageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7EC261828E685C5000658FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EC262A28E685CB000658FA /* LaunchScreen.storyboard in Resources */,
+				B7EC262728E685CB000658FA /* Assets.xcassets in Resources */,
+				B7EC262528E685C5000658FA /* Main.storyboard in Resources */,
+				B7EC264E28E68777000658FA /* sample.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EC262E28E685CB000658FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EC263828E685CB000658FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7EC261628E685C5000658FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EC262228E685C5000658FA /* ViewController.swift in Sources */,
+				B7EC261E28E685C5000658FA /* AppDelegate.swift in Sources */,
+				B7EC262028E685C5000658FA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EC262C28E685CB000658FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EC263528E685CB000658FA /* ExCenterCropImageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7EC263628E685CB000658FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EC264128E685CB000658FA /* ExCenterCropImageUITestsLaunchTests.swift in Sources */,
+				B7EC263F28E685CB000658FA /* ExCenterCropImageUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7EC263228E685CB000658FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7EC261928E685C5000658FA /* ExCenterCropImage */;
+			targetProxy = B7EC263128E685CB000658FA /* PBXContainerItemProxy */;
+		};
+		B7EC263C28E685CB000658FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7EC261928E685C5000658FA /* ExCenterCropImage */;
+			targetProxy = B7EC263B28E685CB000658FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7EC262328E685C5000658FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7EC262428E685C5000658FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7EC262828E685CB000658FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7EC262928E685CB000658FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B7EC264228E685CB000658FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7EC264328E685CB000658FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7EC264528E685CB000658FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExCenterCropImage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExCenterCropImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7EC264628E685CB000658FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExCenterCropImage/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExCenterCropImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B7EC264828E685CB000658FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExCenterCropImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExCenterCropImage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExCenterCropImage";
+			};
+			name = Debug;
+		};
+		B7EC264928E685CB000658FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExCenterCropImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExCenterCropImage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExCenterCropImage";
+			};
+			name = Release;
+		};
+		B7EC264B28E685CB000658FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExCenterCropImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExCenterCropImage;
+			};
+			name = Debug;
+		};
+		B7EC264C28E685CB000658FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExCenterCropImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExCenterCropImage;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7EC261528E685C5000658FA /* Build configuration list for PBXProject "ExCenterCropImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7EC264228E685CB000658FA /* Debug */,
+				B7EC264328E685CB000658FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7EC264428E685CB000658FA /* Build configuration list for PBXNativeTarget "ExCenterCropImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7EC264528E685CB000658FA /* Debug */,
+				B7EC264628E685CB000658FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7EC264728E685CB000658FA /* Build configuration list for PBXNativeTarget "ExCenterCropImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7EC264828E685CB000658FA /* Debug */,
+				B7EC264928E685CB000658FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7EC264A28E685CB000658FA /* Build configuration list for PBXNativeTarget "ExCenterCropImageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7EC264B28E685CB000658FA /* Debug */,
+				B7EC264C28E685CB000658FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7EC261228E685C5000658FA /* Project object */;
+}

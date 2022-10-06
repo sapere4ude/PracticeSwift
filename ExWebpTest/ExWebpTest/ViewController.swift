@@ -24,13 +24,13 @@ class ViewController: UIViewController {
         SDWebImageDownloader.shared.setValue("image/webp,image/*,*/*;q=0.8", forHTTPHeaderField:"Accept")
         let urlPath = Bundle.main.url(forResource: "webpTest", withExtension: "webp")
         let webpURL:URL = urlPath!
-//        imageView.sd_setImage(with: webpURL)
+        imageView2.sd_setImage(with: webpURL)
         
         
         // Kingfisher
-        imageView.loadImage(url: webpURL, placeholder: nil)
-        imageView.layer.zPosition =  1000
-        imageView2.loadImage(url: webpURL, placeholder: nil)
+//        imageView.loadImage(url: webpURL, placeholder: nil)
+//        imageView.layer.zPosition =  1000
+//        imageView2.loadImage(url: webpURL, placeholder: nil)
         
     }
 }
