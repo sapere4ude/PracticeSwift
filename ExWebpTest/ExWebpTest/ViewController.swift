@@ -10,6 +10,11 @@ import SDWebImageWebPCoder
 import Kingfisher
 import KingfisherWebP
 
+/*
+ webp 파일을 보여줘야할 일이 생겼는데 어떤 라이브러리를 사용해야 좋을지 테스트하다가
+ SDwebImageWebPCoder / KingfisherWebP 를 알게되었고 이를 정리했음
+*/
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
@@ -24,14 +29,19 @@ class ViewController: UIViewController {
         SDWebImageDownloader.shared.setValue("image/webp,image/*,*/*;q=0.8", forHTTPHeaderField:"Accept")
         let urlPath = Bundle.main.url(forResource: "webpTest", withExtension: "webp")
         let webpURL:URL = urlPath!
-        imageView2.sd_setImage(with: webpURL)
         
         
-        // Kingfisher
-//        imageView.loadImage(url: webpURL, placeholder: nil)
-//        imageView.layer.zPosition =  1000
-//        imageView2.loadImage(url: webpURL, placeholder: nil)
-        
+        imageView2.sd_setImage(with: webpURL, placeholderImage: nil, options: [ SDWebImageOptions.lowPriority]) { (image, error, cacheType, url) in
+            if error != nil{
+                print("Success")
+                
+                // image 객체 안에 duration:2.965 로 설정되어있는걸 확인했기 때문에
+                // 이미지 반복을 날리기 위해서 2.8초 이후엔 뷰에서 제거될 수 있게 했음.
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.8) {
+                    self.imageView2.removeFromSuperview()
+                }
+            }
+        }
     }
 }
 
