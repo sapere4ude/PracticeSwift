@@ -17,6 +17,8 @@
 		B77E433C290756D6009FA3D5 /* SRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E433B290756D6009FA3D5 /* SRP.swift */; };
 		B77E433E29075841009FA3D5 /* OCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E433D29075841009FA3D5 /* OCP.swift */; };
 		B77E434029075A8E009FA3D5 /* LSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E433F29075A8E009FA3D5 /* LSP.swift */; };
+		B77E4342290833CB009FA3D5 /* ISP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E4341290833CB009FA3D5 /* ISP.swift */; };
+		B77E4344290839FB009FA3D5 /* DIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E4343290839FB009FA3D5 /* DIP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B77E433B290756D6009FA3D5 /* SRP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRP.swift; sourceTree = "<group>"; };
 		B77E433D29075841009FA3D5 /* OCP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCP.swift; sourceTree = "<group>"; };
 		B77E433F29075A8E009FA3D5 /* LSP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LSP.swift; sourceTree = "<group>"; };
+		B77E4341290833CB009FA3D5 /* ISP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISP.swift; sourceTree = "<group>"; };
+		B77E4343290839FB009FA3D5 /* DIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				B77E433B290756D6009FA3D5 /* SRP.swift */,
 				B77E433D29075841009FA3D5 /* OCP.swift */,
 				B77E433F29075A8E009FA3D5 /* LSP.swift */,
+				B77E4341290833CB009FA3D5 /* ISP.swift */,
+				B77E4343290839FB009FA3D5 /* DIP.swift */,
 			);
 			path = Principles;
 			sourceTree = "<group>";
@@ -158,8 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77E4342290833CB009FA3D5 /* ISP.swift in Sources */,
 				B77E434029075A8E009FA3D5 /* LSP.swift in Sources */,
 				B77E433E29075841009FA3D5 /* OCP.swift in Sources */,
+				B77E4344290839FB009FA3D5 /* DIP.swift in Sources */,
 				B77E43282907569D009FA3D5 /* ViewController.swift in Sources */,
 				B77E433C290756D6009FA3D5 /* SRP.swift in Sources */,
 				B77E432E2907569D009FA3D5 /* SOLID.xcdatamodeld in Sources */,
