@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B765709F29378ADD000F2655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B765709E29378ADD000F2655 /* AppDelegate.swift */; };
+		B76570A129378ADD000F2655 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76570A029378ADD000F2655 /* SceneDelegate.swift */; };
+		B76570A329378ADD000F2655 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76570A229378ADD000F2655 /* ViewController.swift */; };
+		B76570A629378ADD000F2655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76570A429378ADD000F2655 /* Main.storyboard */; };
+		B76570A829378AE3000F2655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76570A729378AE3000F2655 /* Assets.xcassets */; };
+		B76570AB29378AE3000F2655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B76570A929378AE3000F2655 /* LaunchScreen.storyboard */; };
+		B76570B629378AE3000F2655 /* ExKakaoMapAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76570B529378AE3000F2655 /* ExKakaoMapAPITests.swift */; };
+		B76570C029378AE3000F2655 /* ExKakaoMapAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76570BF29378AE3000F2655 /* ExKakaoMapAPIUITests.swift */; };
+		B76570C229378AE3000F2655 /* ExKakaoMapAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76570C129378AE3000F2655 /* ExKakaoMapAPIUITestsLaunchTests.swift */; };
+		B76570F529378CFD000F2655 /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D029378CFD000F2655 /* map_pinup_custom@3x.png */; };
+		B76570F629378CFD000F2655 /* map_pin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D129378CFD000F2655 /* map_pin_custom.png */; };
+		B76570F729378CFD000F2655 /* shadow_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D229378CFD000F2655 /* shadow_balloon.png */; };
+		B76570F829378CFD000F2655 /* map_pinup.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D329378CFD000F2655 /* map_pinup.png */; };
+		B76570F929378CFD000F2655 /* detail_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D429378CFD000F2655 /* detail_button.png */; };
+		B76570FA29378CFD000F2655 /* map_pin_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D529378CFD000F2655 /* map_pin_custom@3x.png */; };
+		B76570FB29378CFD000F2655 /* map_pinup@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D629378CFD000F2655 /* map_pinup@3x.png */; };
+		B76570FC29378CFD000F2655 /* map_pin_shadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D729378CFD000F2655 /* map_pin_shadow@3x.png */; };
+		B76570FD29378CFD000F2655 /* copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D829378CFD000F2655 /* copyright.png */; };
+		B76570FE29378CFD000F2655 /* th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570D929378CFD000F2655 /* th_line.png */; };
+		B76570FF29378CFD000F2655 /* map_pin_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570DA29378CFD000F2655 /* map_pin_red@3x.png */; };
+		B765710029378CFD000F2655 /* daum_copyright.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570DB29378CFD000F2655 /* daum_copyright.png */; };
+		B765710129378CFD000F2655 /* map_pin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570DC29378CFD000F2655 /* map_pin@3x.png */; };
+		B765710229378CFD000F2655 /* map_present_tracking.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570DD29378CFD000F2655 /* map_present_tracking.png */; };
+		B765710329378CFD000F2655 /* map_pin_red.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570DE29378CFD000F2655 /* map_pin_red.png */; };
+		B765710429378CFD000F2655 /* info_box.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570E829378CFD000F2655 /* info_box.png */; };
+		B765710529378CFD000F2655 /* point_sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570E929378CFD000F2655 /* point_sprite.png */; };
+		B765710629378CFD000F2655 /* map_pinup_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570EA29378CFD000F2655 /* map_pinup_custom.png */; };
+		B765710729378CFD000F2655 /* info_box_tail.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570EB29378CFD000F2655 /* info_box_tail.png */; };
+		B765710829378CFD000F2655 /* noimage256.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570EC29378CFD000F2655 /* noimage256.png */; };
+		B765710929378CFD000F2655 /* map_present_direction.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570ED29378CFD000F2655 /* map_present_direction.png */; };
+		B765710A29378CFD000F2655 /* map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570EE29378CFD000F2655 /* map_pin.png */; };
+		B765710B29378CFD000F2655 /* map_present.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570EF29378CFD000F2655 /* map_present.png */; };
+		B765710C29378CFD000F2655 /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570F029378CFD000F2655 /* noimage.png */; };
+		B765710D29378CFD000F2655 /* map_present_background_update.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570F129378CFD000F2655 /* map_present_background_update.png */; };
+		B765710E29378CFD000F2655 /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570F229378CFD000F2655 /* daum_th_line.png */; };
+		B765710F29378CFD000F2655 /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = B76570F329378CFD000F2655 /* map_pin_shadow.png */; };
+		B765711029378CFD000F2655 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76570F429378CFD000F2655 /* DaumMap.framework */; };
+		B765711329378D32000F2655 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B765711229378D32000F2655 /* OpenGLES.framework */; };
+		B765711529378D3A000F2655 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B765711429378D3A000F2655 /* SystemConfiguration.framework */; };
+		B765711729378D41000F2655 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B765711629378D41000F2655 /* CoreLocation.framework */; };
+		B765711929378D48000F2655 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B765711829378D48000F2655 /* QuartzCore.framework */; };
+		B765711B29378D51000F2655 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B765711A29378D51000F2655 /* libc++.tbd */; };
+		B765711D29378D5B000F2655 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B765711C29378D5B000F2655 /* libxml2.tbd */; };
+		B765711F29378D62000F2655 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B765711E29378D62000F2655 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B76570B229378AE3000F2655 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B765709329378ADD000F2655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B765709A29378ADD000F2655;
+			remoteInfo = ExKakaoMapAPI;
+		};
+		B76570BC29378AE3000F2655 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B765709329378ADD000F2655 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B765709A29378ADD000F2655;
+			remoteInfo = ExKakaoMapAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B765709B29378ADD000F2655 /* ExKakaoMapAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExKakaoMapAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B765709E29378ADD000F2655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B76570A029378ADD000F2655 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B76570A229378ADD000F2655 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B76570A529378ADD000F2655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B76570A729378AE3000F2655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B76570AA29378AE3000F2655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B76570AC29378AE3000F2655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76570B129378AE3000F2655 /* ExKakaoMapAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExKakaoMapAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76570B529378AE3000F2655 /* ExKakaoMapAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExKakaoMapAPITests.swift; sourceTree = "<group>"; };
+		B76570BB29378AE3000F2655 /* ExKakaoMapAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExKakaoMapAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B76570BF29378AE3000F2655 /* ExKakaoMapAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExKakaoMapAPIUITests.swift; sourceTree = "<group>"; };
+		B76570C129378AE3000F2655 /* ExKakaoMapAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExKakaoMapAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B76570D029378CFD000F2655 /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
+		B76570D129378CFD000F2655 /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
+		B76570D229378CFD000F2655 /* shadow_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_balloon.png; sourceTree = "<group>"; };
+		B76570D329378CFD000F2655 /* map_pinup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup.png; sourceTree = "<group>"; };
+		B76570D429378CFD000F2655 /* detail_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detail_button.png; sourceTree = "<group>"; };
+		B76570D529378CFD000F2655 /* map_pin_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_custom@3x.png"; sourceTree = "<group>"; };
+		B76570D629378CFD000F2655 /* map_pinup@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup@3x.png"; sourceTree = "<group>"; };
+		B76570D729378CFD000F2655 /* map_pin_shadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_shadow@3x.png"; sourceTree = "<group>"; };
+		B76570D829378CFD000F2655 /* copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = copyright.png; sourceTree = "<group>"; };
+		B76570D929378CFD000F2655 /* th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = th_line.png; sourceTree = "<group>"; };
+		B76570DA29378CFD000F2655 /* map_pin_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin_red@3x.png"; sourceTree = "<group>"; };
+		B76570DB29378CFD000F2655 /* daum_copyright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_copyright.png; sourceTree = "<group>"; };
+		B76570DC29378CFD000F2655 /* map_pin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin@3x.png"; sourceTree = "<group>"; };
+		B76570DD29378CFD000F2655 /* map_present_tracking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_tracking.png; sourceTree = "<group>"; };
+		B76570DE29378CFD000F2655 /* map_pin_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_red.png; sourceTree = "<group>"; };
+		B76570E029378CFD000F2655 /* MTMapPOIItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapPOIItem.h; sourceTree = "<group>"; };
+		B76570E129378CFD000F2655 /* MTMapCameraUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapCameraUpdate.h; sourceTree = "<group>"; };
+		B76570E229378CFD000F2655 /* MTMapReverseGeoCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapReverseGeoCoder.h; sourceTree = "<group>"; };
+		B76570E329378CFD000F2655 /* MTMapPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapPolyline.h; sourceTree = "<group>"; };
+		B76570E429378CFD000F2655 /* MTMapLocationMarkerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapLocationMarkerItem.h; sourceTree = "<group>"; };
+		B76570E529378CFD000F2655 /* MTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapView.h; sourceTree = "<group>"; };
+		B76570E629378CFD000F2655 /* MTMapGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapGeometry.h; sourceTree = "<group>"; };
+		B76570E729378CFD000F2655 /* MTMapCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapCircle.h; sourceTree = "<group>"; };
+		B76570E829378CFD000F2655 /* info_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box.png; sourceTree = "<group>"; };
+		B76570E929378CFD000F2655 /* point_sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point_sprite.png; sourceTree = "<group>"; };
+		B76570EA29378CFD000F2655 /* map_pinup_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pinup_custom.png; sourceTree = "<group>"; };
+		B76570EB29378CFD000F2655 /* info_box_tail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_box_tail.png; sourceTree = "<group>"; };
+		B76570EC29378CFD000F2655 /* noimage256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage256.png; sourceTree = "<group>"; };
+		B76570ED29378CFD000F2655 /* map_present_direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_direction.png; sourceTree = "<group>"; };
+		B76570EE29378CFD000F2655 /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
+		B76570EF29378CFD000F2655 /* map_present.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present.png; sourceTree = "<group>"; };
+		B76570F029378CFD000F2655 /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		B76570F129378CFD000F2655 /* map_present_background_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_present_background_update.png; sourceTree = "<group>"; };
+		B76570F229378CFD000F2655 /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
+		B76570F329378CFD000F2655 /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
+		B76570F429378CFD000F2655 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		B765711229378D32000F2655 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		B765711429378D3A000F2655 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B765711629378D41000F2655 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B765711829378D48000F2655 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B765711A29378D51000F2655 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B765711C29378D5B000F2655 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		B765711E29378D62000F2655 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B765712029378DD1000F2655 /* KakaoBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KakaoBridgeHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B765709829378ADD000F2655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B765711F29378D62000F2655 /* libsqlite3.tbd in Frameworks */,
+				B765711D29378D5B000F2655 /* libxml2.tbd in Frameworks */,
+				B765711B29378D51000F2655 /* libc++.tbd in Frameworks */,
+				B765711929378D48000F2655 /* QuartzCore.framework in Frameworks */,
+				B765711729378D41000F2655 /* CoreLocation.framework in Frameworks */,
+				B765711529378D3A000F2655 /* SystemConfiguration.framework in Frameworks */,
+				B765711329378D32000F2655 /* OpenGLES.framework in Frameworks */,
+				B765711029378CFD000F2655 /* DaumMap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76570AE29378AE3000F2655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76570B829378AE3000F2655 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B765709229378ADD000F2655 = {
+			isa = PBXGroup;
+			children = (
+				B765709D29378ADD000F2655 /* ExKakaoMapAPI */,
+				B76570B429378AE3000F2655 /* ExKakaoMapAPITests */,
+				B76570BE29378AE3000F2655 /* ExKakaoMapAPIUITests */,
+				B765709C29378ADD000F2655 /* Products */,
+				B765711129378D32000F2655 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B765709C29378ADD000F2655 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B765709B29378ADD000F2655 /* ExKakaoMapAPI.app */,
+				B76570B129378AE3000F2655 /* ExKakaoMapAPITests.xctest */,
+				B76570BB29378AE3000F2655 /* ExKakaoMapAPIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B765709D29378ADD000F2655 /* ExKakaoMapAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B76570CE29378CFD000F2655 /* DaumMap.embeddedframework */,
+				B765709E29378ADD000F2655 /* AppDelegate.swift */,
+				B76570A029378ADD000F2655 /* SceneDelegate.swift */,
+				B76570A229378ADD000F2655 /* ViewController.swift */,
+				B76570A429378ADD000F2655 /* Main.storyboard */,
+				B76570A729378AE3000F2655 /* Assets.xcassets */,
+				B76570A929378AE3000F2655 /* LaunchScreen.storyboard */,
+				B76570AC29378AE3000F2655 /* Info.plist */,
+				B765712029378DD1000F2655 /* KakaoBridgeHeader.h */,
+			);
+			path = ExKakaoMapAPI;
+			sourceTree = "<group>";
+		};
+		B76570B429378AE3000F2655 /* ExKakaoMapAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				B76570B529378AE3000F2655 /* ExKakaoMapAPITests.swift */,
+			);
+			path = ExKakaoMapAPITests;
+			sourceTree = "<group>";
+		};
+		B76570BE29378AE3000F2655 /* ExKakaoMapAPIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B76570BF29378AE3000F2655 /* ExKakaoMapAPIUITests.swift */,
+				B76570C129378AE3000F2655 /* ExKakaoMapAPIUITestsLaunchTests.swift */,
+			);
+			path = ExKakaoMapAPIUITests;
+			sourceTree = "<group>";
+		};
+		B76570CE29378CFD000F2655 /* DaumMap.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				B76570CF29378CFD000F2655 /* Resources */,
+				B76570F429378CFD000F2655 /* DaumMap.framework */,
+			);
+			path = DaumMap.embeddedframework;
+			sourceTree = "<group>";
+		};
+		B76570CF29378CFD000F2655 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B76570D029378CFD000F2655 /* map_pinup_custom@3x.png */,
+				B76570D129378CFD000F2655 /* map_pin_custom.png */,
+				B76570D229378CFD000F2655 /* shadow_balloon.png */,
+				B76570D329378CFD000F2655 /* map_pinup.png */,
+				B76570D429378CFD000F2655 /* detail_button.png */,
+				B76570D529378CFD000F2655 /* map_pin_custom@3x.png */,
+				B76570D629378CFD000F2655 /* map_pinup@3x.png */,
+				B76570D729378CFD000F2655 /* map_pin_shadow@3x.png */,
+				B76570D829378CFD000F2655 /* copyright.png */,
+				B76570D929378CFD000F2655 /* th_line.png */,
+				B76570DA29378CFD000F2655 /* map_pin_red@3x.png */,
+				B76570DB29378CFD000F2655 /* daum_copyright.png */,
+				B76570DC29378CFD000F2655 /* map_pin@3x.png */,
+				B76570DD29378CFD000F2655 /* map_present_tracking.png */,
+				B76570DE29378CFD000F2655 /* map_pin_red.png */,
+				B76570DF29378CFD000F2655 /* Headers */,
+				B76570E829378CFD000F2655 /* info_box.png */,
+				B76570E929378CFD000F2655 /* point_sprite.png */,
+				B76570EA29378CFD000F2655 /* map_pinup_custom.png */,
+				B76570EB29378CFD000F2655 /* info_box_tail.png */,
+				B76570EC29378CFD000F2655 /* noimage256.png */,
+				B76570ED29378CFD000F2655 /* map_present_direction.png */,
+				B76570EE29378CFD000F2655 /* map_pin.png */,
+				B76570EF29378CFD000F2655 /* map_present.png */,
+				B76570F029378CFD000F2655 /* noimage.png */,
+				B76570F129378CFD000F2655 /* map_present_background_update.png */,
+				B76570F229378CFD000F2655 /* daum_th_line.png */,
+				B76570F329378CFD000F2655 /* map_pin_shadow.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B76570DF29378CFD000F2655 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				B76570E029378CFD000F2655 /* MTMapPOIItem.h */,
+				B76570E129378CFD000F2655 /* MTMapCameraUpdate.h */,
+				B76570E229378CFD000F2655 /* MTMapReverseGeoCoder.h */,
+				B76570E329378CFD000F2655 /* MTMapPolyline.h */,
+				B76570E429378CFD000F2655 /* MTMapLocationMarkerItem.h */,
+				B76570E529378CFD000F2655 /* MTMapView.h */,
+				B76570E629378CFD000F2655 /* MTMapGeometry.h */,
+				B76570E729378CFD000F2655 /* MTMapCircle.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		B765711129378D32000F2655 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B765711E29378D62000F2655 /* libsqlite3.tbd */,
+				B765711C29378D5B000F2655 /* libxml2.tbd */,
+				B765711A29378D51000F2655 /* libc++.tbd */,
+				B765711829378D48000F2655 /* QuartzCore.framework */,
+				B765711629378D41000F2655 /* CoreLocation.framework */,
+				B765711429378D3A000F2655 /* SystemConfiguration.framework */,
+				B765711229378D32000F2655 /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B765709A29378ADD000F2655 /* ExKakaoMapAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B76570C529378AE3000F2655 /* Build configuration list for PBXNativeTarget "ExKakaoMapAPI" */;
+			buildPhases = (
+				B765709729378ADD000F2655 /* Sources */,
+				B765709829378ADD000F2655 /* Frameworks */,
+				B765709929378ADD000F2655 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExKakaoMapAPI;
+			productName = ExKakaoMapAPI;
+			productReference = B765709B29378ADD000F2655 /* ExKakaoMapAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B76570B029378AE3000F2655 /* ExKakaoMapAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B76570C829378AE3000F2655 /* Build configuration list for PBXNativeTarget "ExKakaoMapAPITests" */;
+			buildPhases = (
+				B76570AD29378AE3000F2655 /* Sources */,
+				B76570AE29378AE3000F2655 /* Frameworks */,
+				B76570AF29378AE3000F2655 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B76570B329378AE3000F2655 /* PBXTargetDependency */,
+			);
+			name = ExKakaoMapAPITests;
+			productName = ExKakaoMapAPITests;
+			productReference = B76570B129378AE3000F2655 /* ExKakaoMapAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B76570BA29378AE3000F2655 /* ExKakaoMapAPIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B76570CB29378AE3000F2655 /* Build configuration list for PBXNativeTarget "ExKakaoMapAPIUITests" */;
+			buildPhases = (
+				B76570B729378AE3000F2655 /* Sources */,
+				B76570B829378AE3000F2655 /* Frameworks */,
+				B76570B929378AE3000F2655 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B76570BD29378AE3000F2655 /* PBXTargetDependency */,
+			);
+			name = ExKakaoMapAPIUITests;
+			productName = ExKakaoMapAPIUITests;
+			productReference = B76570BB29378AE3000F2655 /* ExKakaoMapAPIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B765709329378ADD000F2655 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					B765709A29378ADD000F2655 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B76570B029378AE3000F2655 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B765709A29378ADD000F2655;
+					};
+					B76570BA29378AE3000F2655 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B765709A29378ADD000F2655;
+					};
+				};
+			};
+			buildConfigurationList = B765709629378ADD000F2655 /* Build configuration list for PBXProject "ExKakaoMapAPI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B765709229378ADD000F2655;
+			productRefGroup = B765709C29378ADD000F2655 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B765709A29378ADD000F2655 /* ExKakaoMapAPI */,
+				B76570B029378AE3000F2655 /* ExKakaoMapAPITests */,
+				B76570BA29378AE3000F2655 /* ExKakaoMapAPIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B765709929378ADD000F2655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B765710B29378CFD000F2655 /* map_present.png in Resources */,
+				B765710129378CFD000F2655 /* map_pin@3x.png in Resources */,
+				B76570FF29378CFD000F2655 /* map_pin_red@3x.png in Resources */,
+				B765710A29378CFD000F2655 /* map_pin.png in Resources */,
+				B765710329378CFD000F2655 /* map_pin_red.png in Resources */,
+				B76570F529378CFD000F2655 /* map_pinup_custom@3x.png in Resources */,
+				B76570FD29378CFD000F2655 /* copyright.png in Resources */,
+				B76570FC29378CFD000F2655 /* map_pin_shadow@3x.png in Resources */,
+				B76570AB29378AE3000F2655 /* LaunchScreen.storyboard in Resources */,
+				B765710029378CFD000F2655 /* daum_copyright.png in Resources */,
+				B765710429378CFD000F2655 /* info_box.png in Resources */,
+				B76570FA29378CFD000F2655 /* map_pin_custom@3x.png in Resources */,
+				B765710F29378CFD000F2655 /* map_pin_shadow.png in Resources */,
+				B765710229378CFD000F2655 /* map_present_tracking.png in Resources */,
+				B76570F929378CFD000F2655 /* detail_button.png in Resources */,
+				B765710C29378CFD000F2655 /* noimage.png in Resources */,
+				B76570FE29378CFD000F2655 /* th_line.png in Resources */,
+				B765710729378CFD000F2655 /* info_box_tail.png in Resources */,
+				B76570F629378CFD000F2655 /* map_pin_custom.png in Resources */,
+				B765710629378CFD000F2655 /* map_pinup_custom.png in Resources */,
+				B76570FB29378CFD000F2655 /* map_pinup@3x.png in Resources */,
+				B765710529378CFD000F2655 /* point_sprite.png in Resources */,
+				B765710D29378CFD000F2655 /* map_present_background_update.png in Resources */,
+				B765710929378CFD000F2655 /* map_present_direction.png in Resources */,
+				B765710829378CFD000F2655 /* noimage256.png in Resources */,
+				B76570F729378CFD000F2655 /* shadow_balloon.png in Resources */,
+				B76570A829378AE3000F2655 /* Assets.xcassets in Resources */,
+				B76570A629378ADD000F2655 /* Main.storyboard in Resources */,
+				B765710E29378CFD000F2655 /* daum_th_line.png in Resources */,
+				B76570F829378CFD000F2655 /* map_pinup.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76570AF29378AE3000F2655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76570B929378AE3000F2655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B765709729378ADD000F2655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B76570A329378ADD000F2655 /* ViewController.swift in Sources */,
+				B765709F29378ADD000F2655 /* AppDelegate.swift in Sources */,
+				B76570A129378ADD000F2655 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76570AD29378AE3000F2655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B76570B629378AE3000F2655 /* ExKakaoMapAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B76570B729378AE3000F2655 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B76570C029378AE3000F2655 /* ExKakaoMapAPIUITests.swift in Sources */,
+				B76570C229378AE3000F2655 /* ExKakaoMapAPIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B76570B329378AE3000F2655 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B765709A29378ADD000F2655 /* ExKakaoMapAPI */;
+			targetProxy = B76570B229378AE3000F2655 /* PBXContainerItemProxy */;
+		};
+		B76570BD29378AE3000F2655 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B765709A29378ADD000F2655 /* ExKakaoMapAPI */;
+			targetProxy = B76570BC29378AE3000F2655 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B76570A429378ADD000F2655 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B76570A529378ADD000F2655 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B76570A929378AE3000F2655 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B76570AA29378AE3000F2655 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B76570C329378AE3000F2655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B76570C429378AE3000F2655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B76570C629378AE3000F2655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 28K9LD277B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExKakaoMapAPI/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExKakaoMapAPI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExKakaoMapAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = develop_wildcard;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/kant/Desktop/PracticeSwift/ExKakaoMapAPI/ExKakaoMapAPI/KakaoBridgeHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B76570C729378AE3000F2655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 28K9LD277B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ExKakaoMapAPI/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExKakaoMapAPI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExKakaoMapAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = develop_wildcard;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/kant/Desktop/PracticeSwift/ExKakaoMapAPI/ExKakaoMapAPI/KakaoBridgeHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B76570C929378AE3000F2655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExKakaoMapAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExKakaoMapAPI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExKakaoMapAPI";
+			};
+			name = Debug;
+		};
+		B76570CA29378AE3000F2655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExKakaoMapAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExKakaoMapAPI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExKakaoMapAPI";
+			};
+			name = Release;
+		};
+		B76570CC29378AE3000F2655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExKakaoMapAPIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExKakaoMapAPI;
+			};
+			name = Debug;
+		};
+		B76570CD29378AE3000F2655 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExKakaoMapAPIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExKakaoMapAPI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B765709629378ADD000F2655 /* Build configuration list for PBXProject "ExKakaoMapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B76570C329378AE3000F2655 /* Debug */,
+				B76570C429378AE3000F2655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B76570C529378AE3000F2655 /* Build configuration list for PBXNativeTarget "ExKakaoMapAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B76570C629378AE3000F2655 /* Debug */,
+				B76570C729378AE3000F2655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B76570C829378AE3000F2655 /* Build configuration list for PBXNativeTarget "ExKakaoMapAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B76570C929378AE3000F2655 /* Debug */,
+				B76570CA29378AE3000F2655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B76570CB29378AE3000F2655 /* Build configuration list for PBXNativeTarget "ExKakaoMapAPIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B76570CC29378AE3000F2655 /* Debug */,
+				B76570CD29378AE3000F2655 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B765709329378ADD000F2655 /* Project object */;
+}

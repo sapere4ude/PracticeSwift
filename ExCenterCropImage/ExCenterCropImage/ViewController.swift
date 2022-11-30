@@ -59,8 +59,8 @@ class ViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             thumbnailImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            thumbnailImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -100),
-            thumbnailImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 100),
+            thumbnailImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -200),
+            thumbnailImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 200),
         ])
     }
     
