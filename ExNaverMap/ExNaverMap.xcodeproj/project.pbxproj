@@ -1,0 +1,756 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38BB07F700EF9CEA5324C7F1 /* Pods_ExNaverMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BEF8D88955346465B9BE38 /* Pods_ExNaverMapTests.framework */; };
+		B009471362D26BC5313A0A42 /* Pods_ExNaverMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A3C406EF96A1B5C1085D33 /* Pods_ExNaverMap.framework */; };
+		B70227FB293C37EE000D0CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70227FA293C37EE000D0CFC /* AppDelegate.swift */; };
+		B70227FD293C37EE000D0CFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70227FC293C37EE000D0CFC /* SceneDelegate.swift */; };
+		B70227FF293C37EE000D0CFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70227FE293C37EE000D0CFC /* ViewController.swift */; };
+		B7022802293C37EE000D0CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7022800293C37EE000D0CFC /* Main.storyboard */; };
+		B7022804293C37EF000D0CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7022803293C37EF000D0CFC /* Assets.xcassets */; };
+		B7022807293C37EF000D0CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7022805293C37EF000D0CFC /* LaunchScreen.storyboard */; };
+		B7022812293C37EF000D0CFC /* ExNaverMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7022811293C37EF000D0CFC /* ExNaverMapTests.swift */; };
+		B702281C293C37EF000D0CFC /* ExNaverMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702281B293C37EF000D0CFC /* ExNaverMapUITests.swift */; };
+		B702281E293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702281D293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift */; };
+		C74B934D0E54A759347F35DD /* Pods_ExNaverMap_ExNaverMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537DCB3D0E78DF07C94C06AC /* Pods_ExNaverMap_ExNaverMapUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B702280E293C37EF000D0CFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B70227EF293C37EE000D0CFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B70227F6293C37EE000D0CFC;
+			remoteInfo = ExNaverMap;
+		};
+		B7022818293C37EF000D0CFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B70227EF293C37EE000D0CFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B70227F6293C37EE000D0CFC;
+			remoteInfo = ExNaverMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32A9928DE97300185DFCA7AB /* Pods-ExNaverMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExNaverMapTests.debug.xcconfig"; path = "Target Support Files/Pods-ExNaverMapTests/Pods-ExNaverMapTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4394612BE323CFBD85118F27 /* Pods-ExNaverMap-ExNaverMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExNaverMap-ExNaverMapUITests.release.xcconfig"; path = "Target Support Files/Pods-ExNaverMap-ExNaverMapUITests/Pods-ExNaverMap-ExNaverMapUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4497F981688F78A87A742C8A /* Pods-ExNaverMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExNaverMap.release.xcconfig"; path = "Target Support Files/Pods-ExNaverMap/Pods-ExNaverMap.release.xcconfig"; sourceTree = "<group>"; };
+		537DCB3D0E78DF07C94C06AC /* Pods_ExNaverMap_ExNaverMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExNaverMap_ExNaverMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		675D3AD583A54CE9C1403F2D /* Pods-ExNaverMap-ExNaverMapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExNaverMap-ExNaverMapUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExNaverMap-ExNaverMapUITests/Pods-ExNaverMap-ExNaverMapUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E11AA71AB85F8DA5DBFF257 /* Pods-ExNaverMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExNaverMapTests.release.xcconfig"; path = "Target Support Files/Pods-ExNaverMapTests/Pods-ExNaverMapTests.release.xcconfig"; sourceTree = "<group>"; };
+		92BEF8D88955346465B9BE38 /* Pods_ExNaverMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExNaverMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70227F7293C37EE000D0CFC /* ExNaverMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExNaverMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70227FA293C37EE000D0CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B70227FC293C37EE000D0CFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B70227FE293C37EE000D0CFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7022801293C37EE000D0CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B7022803293C37EF000D0CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7022806293C37EF000D0CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7022808293C37EF000D0CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B702280D293C37EF000D0CFC /* ExNaverMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExNaverMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7022811293C37EF000D0CFC /* ExNaverMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExNaverMapTests.swift; sourceTree = "<group>"; };
+		B7022817293C37EF000D0CFC /* ExNaverMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExNaverMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B702281B293C37EF000D0CFC /* ExNaverMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExNaverMapUITests.swift; sourceTree = "<group>"; };
+		B702281D293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExNaverMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0A3C406EF96A1B5C1085D33 /* Pods_ExNaverMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExNaverMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9934F8009E9E16E0789644E /* Pods-ExNaverMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExNaverMap.debug.xcconfig"; path = "Target Support Files/Pods-ExNaverMap/Pods-ExNaverMap.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B70227F4293C37EE000D0CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B009471362D26BC5313A0A42 /* Pods_ExNaverMap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B702280A293C37EF000D0CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38BB07F700EF9CEA5324C7F1 /* Pods_ExNaverMapTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7022814293C37EF000D0CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C74B934D0E54A759347F35DD /* Pods_ExNaverMap_ExNaverMapUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39B3F3B6D8DE74BA70FEDF10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0A3C406EF96A1B5C1085D33 /* Pods_ExNaverMap.framework */,
+				537DCB3D0E78DF07C94C06AC /* Pods_ExNaverMap_ExNaverMapUITests.framework */,
+				92BEF8D88955346465B9BE38 /* Pods_ExNaverMapTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		654E2EE97A50520EB4C227AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9934F8009E9E16E0789644E /* Pods-ExNaverMap.debug.xcconfig */,
+				4497F981688F78A87A742C8A /* Pods-ExNaverMap.release.xcconfig */,
+				675D3AD583A54CE9C1403F2D /* Pods-ExNaverMap-ExNaverMapUITests.debug.xcconfig */,
+				4394612BE323CFBD85118F27 /* Pods-ExNaverMap-ExNaverMapUITests.release.xcconfig */,
+				32A9928DE97300185DFCA7AB /* Pods-ExNaverMapTests.debug.xcconfig */,
+				6E11AA71AB85F8DA5DBFF257 /* Pods-ExNaverMapTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B70227EE293C37EE000D0CFC = {
+			isa = PBXGroup;
+			children = (
+				B70227F9293C37EE000D0CFC /* ExNaverMap */,
+				B7022810293C37EF000D0CFC /* ExNaverMapTests */,
+				B702281A293C37EF000D0CFC /* ExNaverMapUITests */,
+				B70227F8293C37EE000D0CFC /* Products */,
+				654E2EE97A50520EB4C227AC /* Pods */,
+				39B3F3B6D8DE74BA70FEDF10 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B70227F8293C37EE000D0CFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B70227F7293C37EE000D0CFC /* ExNaverMap.app */,
+				B702280D293C37EF000D0CFC /* ExNaverMapTests.xctest */,
+				B7022817293C37EF000D0CFC /* ExNaverMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B70227F9293C37EE000D0CFC /* ExNaverMap */ = {
+			isa = PBXGroup;
+			children = (
+				B70227FA293C37EE000D0CFC /* AppDelegate.swift */,
+				B70227FC293C37EE000D0CFC /* SceneDelegate.swift */,
+				B70227FE293C37EE000D0CFC /* ViewController.swift */,
+				B7022800293C37EE000D0CFC /* Main.storyboard */,
+				B7022803293C37EF000D0CFC /* Assets.xcassets */,
+				B7022805293C37EF000D0CFC /* LaunchScreen.storyboard */,
+				B7022808293C37EF000D0CFC /* Info.plist */,
+			);
+			path = ExNaverMap;
+			sourceTree = "<group>";
+		};
+		B7022810293C37EF000D0CFC /* ExNaverMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				B7022811293C37EF000D0CFC /* ExNaverMapTests.swift */,
+			);
+			path = ExNaverMapTests;
+			sourceTree = "<group>";
+		};
+		B702281A293C37EF000D0CFC /* ExNaverMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B702281B293C37EF000D0CFC /* ExNaverMapUITests.swift */,
+				B702281D293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift */,
+			);
+			path = ExNaverMapUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B70227F6293C37EE000D0CFC /* ExNaverMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7022821293C37EF000D0CFC /* Build configuration list for PBXNativeTarget "ExNaverMap" */;
+			buildPhases = (
+				48B38F43A8540FBC05FE5543 /* [CP] Check Pods Manifest.lock */,
+				B70227F3293C37EE000D0CFC /* Sources */,
+				B70227F4293C37EE000D0CFC /* Frameworks */,
+				B70227F5293C37EE000D0CFC /* Resources */,
+				41EBB98AD66F05F7EF1B3B5F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExNaverMap;
+			productName = ExNaverMap;
+			productReference = B70227F7293C37EE000D0CFC /* ExNaverMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B702280C293C37EF000D0CFC /* ExNaverMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7022824293C37EF000D0CFC /* Build configuration list for PBXNativeTarget "ExNaverMapTests" */;
+			buildPhases = (
+				8B9D7F37D940302C9C8477F4 /* [CP] Check Pods Manifest.lock */,
+				B7022809293C37EF000D0CFC /* Sources */,
+				B702280A293C37EF000D0CFC /* Frameworks */,
+				B702280B293C37EF000D0CFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B702280F293C37EF000D0CFC /* PBXTargetDependency */,
+			);
+			name = ExNaverMapTests;
+			productName = ExNaverMapTests;
+			productReference = B702280D293C37EF000D0CFC /* ExNaverMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7022816293C37EF000D0CFC /* ExNaverMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7022827293C37EF000D0CFC /* Build configuration list for PBXNativeTarget "ExNaverMapUITests" */;
+			buildPhases = (
+				D8B87F27CD4AE151EA61D448 /* [CP] Check Pods Manifest.lock */,
+				B7022813293C37EF000D0CFC /* Sources */,
+				B7022814293C37EF000D0CFC /* Frameworks */,
+				B7022815293C37EF000D0CFC /* Resources */,
+				74BFD902A4CF1584467F82D8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7022819293C37EF000D0CFC /* PBXTargetDependency */,
+			);
+			name = ExNaverMapUITests;
+			productName = ExNaverMapUITests;
+			productReference = B7022817293C37EF000D0CFC /* ExNaverMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B70227EF293C37EE000D0CFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					B70227F6293C37EE000D0CFC = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					B702280C293C37EF000D0CFC = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B70227F6293C37EE000D0CFC;
+					};
+					B7022816293C37EF000D0CFC = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = B70227F6293C37EE000D0CFC;
+					};
+				};
+			};
+			buildConfigurationList = B70227F2293C37EE000D0CFC /* Build configuration list for PBXProject "ExNaverMap" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B70227EE293C37EE000D0CFC;
+			productRefGroup = B70227F8293C37EE000D0CFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B70227F6293C37EE000D0CFC /* ExNaverMap */,
+				B702280C293C37EF000D0CFC /* ExNaverMapTests */,
+				B7022816293C37EF000D0CFC /* ExNaverMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B70227F5293C37EE000D0CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7022807293C37EF000D0CFC /* LaunchScreen.storyboard in Resources */,
+				B7022804293C37EF000D0CFC /* Assets.xcassets in Resources */,
+				B7022802293C37EE000D0CFC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B702280B293C37EF000D0CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7022815293C37EF000D0CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41EBB98AD66F05F7EF1B3B5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExNaverMap/Pods-ExNaverMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExNaverMap/Pods-ExNaverMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExNaverMap/Pods-ExNaverMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48B38F43A8540FBC05FE5543 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExNaverMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74BFD902A4CF1584467F82D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExNaverMap-ExNaverMapUITests/Pods-ExNaverMap-ExNaverMapUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExNaverMap-ExNaverMapUITests/Pods-ExNaverMap-ExNaverMapUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExNaverMap-ExNaverMapUITests/Pods-ExNaverMap-ExNaverMapUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B9D7F37D940302C9C8477F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExNaverMapTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8B87F27CD4AE151EA61D448 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExNaverMap-ExNaverMapUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B70227F3293C37EE000D0CFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70227FF293C37EE000D0CFC /* ViewController.swift in Sources */,
+				B70227FB293C37EE000D0CFC /* AppDelegate.swift in Sources */,
+				B70227FD293C37EE000D0CFC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7022809293C37EF000D0CFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7022812293C37EF000D0CFC /* ExNaverMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7022813293C37EF000D0CFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B702281C293C37EF000D0CFC /* ExNaverMapUITests.swift in Sources */,
+				B702281E293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B702280F293C37EF000D0CFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B70227F6293C37EE000D0CFC /* ExNaverMap */;
+			targetProxy = B702280E293C37EF000D0CFC /* PBXContainerItemProxy */;
+		};
+		B7022819293C37EF000D0CFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B70227F6293C37EE000D0CFC /* ExNaverMap */;
+			targetProxy = B7022818293C37EF000D0CFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7022800293C37EE000D0CFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7022801293C37EE000D0CFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B7022805293C37EF000D0CFC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7022806293C37EF000D0CFC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B702281F293C37EF000D0CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7022820293C37EF000D0CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7022822293C37EF000D0CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9934F8009E9E16E0789644E /* Pods-ExNaverMap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExNaverMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExNaverMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B7022823293C37EF000D0CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4497F981688F78A87A742C8A /* Pods-ExNaverMap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExNaverMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExNaverMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B7022825293C37EF000D0CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32A9928DE97300185DFCA7AB /* Pods-ExNaverMapTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExNaverMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExNaverMap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExNaverMap";
+			};
+			name = Debug;
+		};
+		B7022826293C37EF000D0CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E11AA71AB85F8DA5DBFF257 /* Pods-ExNaverMapTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExNaverMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExNaverMap.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ExNaverMap";
+			};
+			name = Release;
+		};
+		B7022828293C37EF000D0CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675D3AD583A54CE9C1403F2D /* Pods-ExNaverMap-ExNaverMapUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExNaverMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExNaverMap;
+			};
+			name = Debug;
+		};
+		B7022829293C37EF000D0CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4394612BE323CFBD85118F27 /* Pods-ExNaverMap-ExNaverMapUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kant.ExNaverMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ExNaverMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B70227F2293C37EE000D0CFC /* Build configuration list for PBXProject "ExNaverMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B702281F293C37EF000D0CFC /* Debug */,
+				B7022820293C37EF000D0CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7022821293C37EF000D0CFC /* Build configuration list for PBXNativeTarget "ExNaverMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7022822293C37EF000D0CFC /* Debug */,
+				B7022823293C37EF000D0CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7022824293C37EF000D0CFC /* Build configuration list for PBXNativeTarget "ExNaverMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7022825293C37EF000D0CFC /* Debug */,
+				B7022826293C37EF000D0CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7022827293C37EF000D0CFC /* Build configuration list for PBXNativeTarget "ExNaverMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7022828293C37EF000D0CFC /* Debug */,
+				B7022829293C37EF000D0CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B70227EF293C37EE000D0CFC /* Project object */;
+}

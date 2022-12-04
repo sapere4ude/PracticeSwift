@@ -1,0 +1,20 @@
+PODS:
+  - NMapsMap (3.16.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - NMapsMap
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  trunk:
+    - NMapsMap
+    - SnapKit
+
+SPEC CHECKSUMS:
+  NMapsMap: a2593320fca2bb09e521c05b4dffee4da42e96ed
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: a170d2c324769deee529b8f6770b438bb6074435
+
+COCOAPODS: 1.11.3
