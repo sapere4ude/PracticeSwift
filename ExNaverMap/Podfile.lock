@@ -1,9 +1,9 @@
 PODS:
-  - NMapsMap (3.16.0)
+  - NMapsMap (3.15.0)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - NMapsMap
+  - NMapsMap (= 3.15.0)
   - SnapKit (~> 5.6.0)
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  NMapsMap: a2593320fca2bb09e521c05b4dffee4da42e96ed
+  NMapsMap: f151761c088d6516064c59da03ab6503769486e6
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: a170d2c324769deee529b8f6770b438bb6074435
+PODFILE CHECKSUM: fd66fd7a7e115acf047dd9ae909b53a09c78e6cd
 
 COCOAPODS: 1.11.3

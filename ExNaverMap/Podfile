@@ -6,7 +6,7 @@ target 'ExNaverMap' do
   use_frameworks!
 
   # Pods for ExNaverMap
-  pod 'NMapsMap'
+  pod 'NMapsMap','3.15.0'
   pod 'SnapKit', '~> 5.6.0'
   target 'ExNaverMapTests' do
     inherit! :search_paths
