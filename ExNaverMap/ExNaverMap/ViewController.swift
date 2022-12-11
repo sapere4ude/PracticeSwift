@@ -9,10 +9,20 @@ import UIKit
 import SnapKit
 import NMapsMap
 import CoreLocation
+import Combine
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    var isCreateMarker: Bool = true
+    var isRegisterCaption: Bool = true
+    
     private var locationManager = CLLocationManager()
+    
+    var naverMapProxy = NaverMapProxy()
+    
+    var pickMemos = PickMemosVM()
+    
+    var subscriptions = Set<AnyCancellable>()
     
     private let mapView: NMFMapView = {
         let mapView = NMFMapView()
@@ -23,22 +33,39 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var markerArray: [NMFMarker]?
     
     // pickMemoModel 타입의 값은 싱글톤으로 관리되어야함
-    var pickMemos: [PickMemoModel]? = []
+//    var pickMemos: [PickMemoModel]? = []
     
     var caption: String?
-    var isCreateMarker: Bool = true
-    var isRegisterCaption: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.touchDelegate = self
+//        pickMemos.$pickMemos
+        
+        //mapView.touchDelegate = self
+        mapView.touchDelegate = naverMapProxy
         
         configureSubViews()
         configureUI()
         configureLocation()
 //        configureCurrentPositionMarker()
+        
+        naverMapProxy.$tapPosition.sink { tapPosition in
+            print("tapPosition: \(tapPosition)")
+            self.createMarker(latlng: tapPosition)
+        }.store(in: &subscriptions) // & <- inout
+        
+        
+        // PassthroughSubject 형태의 변수 값을 이렇게 가져올 수 있다.
+//        naverMapProxy.outputAction
+//            .receive(on: DispatchQueue.main)
+//            .sink { value in
+//                print(value)
+//            }
+//            .store(in: &subscriptions)
     }
+    
+    
     
     // MARK: UI
     func configureSubViews() {
@@ -83,62 +110,20 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         guard let latlng = latlng else { return }
         let marker = NMFMarker()
         marker.position = latlng
-//        marker.
         marker.mapView = mapView
-    }
-}
-
-// MARK: - 지도 위 내가 클릭한 곳으로 카메라 이동
-extension ViewController: NMFMapViewTouchDelegate {
-    
-    /*
-     didTap & point -> 마커가 있어야지만 타는 코드
-     caption 여부로 1차 판단
-     
-     */
-    
-    func mapView(_ mapView: NMFMapView, didTap symbol: NMFSymbol) -> Bool {
-        print("kant, test2")
-        if(symbol.caption.count > 0) {
-            caption = symbol.caption
-            pickMemos?.forEach({ pickMemo in
-                if pickMemo.caption == symbol.caption {
-                    isCreateMarker = false
+        
+        let handler = { [weak self] (overlay: NMFOverlay) -> Bool in
+            if let marker = overlay as? NMFMarker {
+                if marker.infoWindow == nil {
+                    // 현재 마커에 정보 창이 열려있지 않을 경우 엶
+                    //                    self?.infoWindow.open(with: marker)
+                } else {
+                    // 이미 현재 마커에 정보 창이 열려있을 경우 닫음
+                    //                    self?.infoWindow.close()
                 }
-            })
-            isRegisterCaption = false
-            return false // 마커 만들 수 있다
-        } else {
-            return true // 마커 만들 수 없다
-        }
+            }
+            return true
+        };
+        marker.touchHandler = handler
     }
-    
-    // 캡션 값 없이 바로 진입 가능
-    func mapView(_ mapView: NMFMapView, didTapMap latlng: NMGLatLng, point: CGPoint) {
-        print("kant, test1")
-        // guard 문 -> 이 값이 맞아야해. 그렇지 않으면 조건문 타지 않아
-        guard isCreateMarker == true else { return }
-        guard isRegisterCaption == false else { return }
-        
-        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: latlng.lat, lng: latlng.lng)) 
-        cameraUpdate.animation = .easeIn
-        mapView.moveCamera(cameraUpdate)
-
-        var pickMemoData = [PickMemoModel]()
-        let pickMemo = PickMemoModel(latlng: latlng, caption: caption)
-        pickMemos?.append(pickMemo)
-        createMarker(latlng: latlng)
-        
-        
-        isRegisterCaption = true
-        
-        /*
-         해당 지점에 마커가 있다? > 해당 내용 보여주는 VC
-         해당 지점에 마커가 없다? > 메모생성 VC
-         */
-   }
-    
-    // TODO: 마커가 찍히는 부분을 캡션값이 있는 것에 한에서 찍어줄 것. 캡션을 벗어나는 값이면 찍지 않기
-    // 현재 문제점은 캡션을 벗어난 곳을 찍었지만 계속해서 didTapMap 메서드가 불리고 있는점
-    // for in 문을 통해 캡션 여부 파악을 진행하지만 정상 동작하지 않는 점
 }

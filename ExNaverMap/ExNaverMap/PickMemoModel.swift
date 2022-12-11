@@ -13,5 +13,6 @@ struct PickMemoModel {
     var lat: Double?
     var lng: Double?
     var latlng: NMGLatLng?
-    var caption: String?
+    var symbol: NMFSymbol?
+    var marker: [NMFMarker]?
 }

@@ -19,6 +19,8 @@
 		B702281C293C37EF000D0CFC /* ExNaverMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702281B293C37EF000D0CFC /* ExNaverMapUITests.swift */; };
 		B702281E293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702281D293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift */; };
 		B702282B293DFECE000D0CFC /* PickMemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702282A293DFECE000D0CFC /* PickMemoModel.swift */; };
+		B702287C2945A864000D0CFC /* NaverMapProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702287B2945A864000D0CFC /* NaverMapProxy.swift */; };
+		B702287E2945F08E000D0CFC /* PickMemosVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B702287D2945F08E000D0CFC /* PickMemosVM.swift */; };
 		C74B934D0E54A759347F35DD /* Pods_ExNaverMap_ExNaverMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537DCB3D0E78DF07C94C06AC /* Pods_ExNaverMap_ExNaverMapUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		B702281B293C37EF000D0CFC /* ExNaverMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExNaverMapUITests.swift; sourceTree = "<group>"; };
 		B702281D293C37EF000D0CFC /* ExNaverMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExNaverMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B702282A293DFECE000D0CFC /* PickMemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMemoModel.swift; sourceTree = "<group>"; };
+		B702287B2945A864000D0CFC /* NaverMapProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapProxy.swift; sourceTree = "<group>"; };
+		B702287D2945F08E000D0CFC /* PickMemosVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMemosVM.swift; sourceTree = "<group>"; };
 		C0A3C406EF96A1B5C1085D33 /* Pods_ExNaverMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExNaverMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9934F8009E9E16E0789644E /* Pods-ExNaverMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExNaverMap.debug.xcconfig"; path = "Target Support Files/Pods-ExNaverMap/Pods-ExNaverMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +148,8 @@
 				B70227FA293C37EE000D0CFC /* AppDelegate.swift */,
 				B70227FC293C37EE000D0CFC /* SceneDelegate.swift */,
 				B70227FE293C37EE000D0CFC /* ViewController.swift */,
+				B702287D2945F08E000D0CFC /* PickMemosVM.swift */,
+				B702287B2945A864000D0CFC /* NaverMapProxy.swift */,
 				B7022800293C37EE000D0CFC /* Main.storyboard */,
 				B7022803293C37EF000D0CFC /* Assets.xcassets */,
 				B7022805293C37EF000D0CFC /* LaunchScreen.storyboard */,
@@ -412,6 +418,8 @@
 				B702282B293DFECE000D0CFC /* PickMemoModel.swift in Sources */,
 				B70227FF293C37EE000D0CFC /* ViewController.swift in Sources */,
 				B70227FB293C37EE000D0CFC /* AppDelegate.swift in Sources */,
+				B702287E2945F08E000D0CFC /* PickMemosVM.swift in Sources */,
+				B702287C2945A864000D0CFC /* NaverMapProxy.swift in Sources */,
 				B70227FD293C37EE000D0CFC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
