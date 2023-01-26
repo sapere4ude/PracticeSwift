@@ -7,7 +7,6 @@
 
 import UIKit
 import Combine
-import Foundation
 
 class TestView: UIView {
     
@@ -39,13 +38,38 @@ class TestView: UIView {
         counter.$currentTimePublisher
             .receive(on: RunLoop.main)
             .sink { (seconds) in
-             print("Seconds: \(seconds)")
+                print("Seconds: \(seconds)")
                 if seconds > 10.0 {
+                    print(#fileID, #function, #line, "칸트, 선 넘었다")
                     self.counter.kill()
                     self.removeFromSuperview()
                 }
                 self.customLabel.text = String(seconds)
             }
+            .store(in: &subscriptions)
+        
+        // 애플 공식 문서
+        // (https://developer.apple.com/documentation/combine/routing-notifications-to-combine-subscribers)
+        NotificationCenter.default
+                .publisher(for: UIDevice.orientationDidChangeNotification)
+                .filter() { _ in UIDevice.current.orientation == .portrait }
+                .sink() { _ in
+                    print(#fileID, #function, #line, "칸트 portrait") }
+                .store(in: &subscriptions)
+        
+        NotificationCenter.default
+            .publisher(for: UIApplication.willEnterForegroundNotification)
+            .sink() { _ in
+                self.counter.restart(Δt: 1)
+                print(#fileID, #function, #line, "칸트 appMovedToForeground") }
+            .store(in: &subscriptions)
+        
+        NotificationCenter.default
+            .publisher(for: UIApplication.didEnterBackgroundNotification)
+            .sink() { _ in
+                self.counter.kill()
+                self.removeFromSuperview()
+                print(#fileID, #function, #line, "칸트 didEnterBackgroundNotification") }
             .store(in: &subscriptions)
     }
     
@@ -57,7 +81,6 @@ class TestView: UIView {
 class Counter: ObservableObject {
 
     @Published var currentTimePublisher: TimeInterval = 0.0
-    
     private var timer: Timer?
     
     init(Δt: Double) {
