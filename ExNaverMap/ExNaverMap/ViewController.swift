@@ -65,8 +65,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //            .store(in: &subscriptions)
     }
     
-    
-    
     // MARK: UI
     func configureSubViews() {
         view.addSubview(mapView)
