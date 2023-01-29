@@ -14,6 +14,8 @@
 		B79D213E29821B39005F4C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79D213D29821B39005F4C13 /* Assets.xcassets */; };
 		B79D214129821B39005F4C13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79D213F29821B39005F4C13 /* LaunchScreen.storyboard */; };
 		B79D214929821B55005F4C13 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D214829821B55005F4C13 /* TestView.swift */; };
+		B79D214D29825B02005F4C13 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D214C29825B02005F4C13 /* SecondViewController.swift */; };
+		B79D21502986148B005F4C13 /* TimerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D214F2986148B005F4C13 /* TimerTestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		B79D214029821B39005F4C13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79D214229821B39005F4C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B79D214829821B55005F4C13 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		B79D214C29825B02005F4C13 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B79D214F2986148B005F4C13 /* TimerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				B79D213629821B38005F4C13 /* SceneDelegate.swift */,
 				B79D213829821B38005F4C13 /* ViewController.swift */,
 				B79D214829821B55005F4C13 /* TestView.swift */,
+				B79D214F2986148B005F4C13 /* TimerTestView.swift */,
+				B79D214C29825B02005F4C13 /* SecondViewController.swift */,
 				B79D213A29821B38005F4C13 /* Main.storyboard */,
 				B79D213D29821B39005F4C13 /* Assets.xcassets */,
 				B79D213F29821B39005F4C13 /* LaunchScreen.storyboard */,
@@ -143,7 +149,9 @@
 			files = (
 				B79D214929821B55005F4C13 /* TestView.swift in Sources */,
 				B79D213929821B38005F4C13 /* ViewController.swift in Sources */,
+				B79D21502986148B005F4C13 /* TimerTestView.swift in Sources */,
 				B79D213529821B38005F4C13 /* AppDelegate.swift in Sources */,
+				B79D214D29825B02005F4C13 /* SecondViewController.swift in Sources */,
 				B79D213729821B38005F4C13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
