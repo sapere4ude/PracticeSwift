@@ -13,8 +13,13 @@
 		BE964B842B2C67C40060CDC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE964B822B2C67C40060CDC7 /* Main.storyboard */; };
 		BE964B862B2C67C60060CDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE964B852B2C67C60060CDC7 /* Assets.xcassets */; };
 		BE964B892B2C67C60060CDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE964B872B2C67C60060CDC7 /* LaunchScreen.storyboard */; };
-		BE964B912B2C74270060CDC7 /* MusicRecommendFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964B902B2C74270060CDC7 /* MusicRecommendFactory.swift */; };
-		BE964B932B2C78E20060CDC7 /* MusicRecommendHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964B922B2C78E20060CDC7 /* MusicRecommendHeaderView.swift */; };
+		BE964B9B2B2D740C0060CDC7 /* SectionHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964B9A2B2D740C0060CDC7 /* SectionHeaderViewModel.swift */; };
+		BE964B9D2B2D76670060CDC7 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964B9C2B2D76670060CDC7 /* CellViewModel.swift */; };
+		BE964B9F2B2D85250060CDC7 /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964B9E2B2D85250060CDC7 /* PopularCell.swift */; };
+		BE964BA62B2D85DF0060CDC7 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964BA52B2D85DF0060CDC7 /* CollectionViewModel.swift */; };
+		BE964BA82B2D88780060CDC7 /* PopularSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964BA72B2D88780060CDC7 /* PopularSectionHeaderView.swift */; };
+		BE964BAA2B2DBECF0060CDC7 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964BA92B2DBECF0060CDC7 /* FeedCell.swift */; };
+		BE964BAC2B2DBEDB0060CDC7 /* FeedSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE964BAB2B2DBEDB0060CDC7 /* FeedSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +31,13 @@
 		BE964B852B2C67C60060CDC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE964B882B2C67C60060CDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE964B8A2B2C67C60060CDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE964B902B2C74270060CDC7 /* MusicRecommendFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRecommendFactory.swift; sourceTree = "<group>"; };
-		BE964B922B2C78E20060CDC7 /* MusicRecommendHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRecommendHeaderView.swift; sourceTree = "<group>"; };
+		BE964B9A2B2D740C0060CDC7 /* SectionHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderViewModel.swift; sourceTree = "<group>"; };
+		BE964B9C2B2D76670060CDC7 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		BE964B9E2B2D85250060CDC7 /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
+		BE964BA52B2D85DF0060CDC7 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		BE964BA72B2D88780060CDC7 /* PopularSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSectionHeaderView.swift; sourceTree = "<group>"; };
+		BE964BA92B2DBECF0060CDC7 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		BE964BAB2B2DBEDB0060CDC7 /* FeedSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,9 @@
 		BE964B7B2B2C67C40060CDC7 /* ExProtocolOrientedCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				BE964BA22B2D85510060CDC7 /* ViewModel */,
+				BE964BA12B2D854C0060CDC7 /* Model */,
+				BE964BA02B2D85480060CDC7 /* View */,
 				BE964B7C2B2C67C40060CDC7 /* AppDelegate.swift */,
 				BE964B7E2B2C67C40060CDC7 /* SceneDelegate.swift */,
 				BE964B802B2C67C40060CDC7 /* ViewController.swift */,
@@ -67,10 +80,36 @@
 				BE964B852B2C67C60060CDC7 /* Assets.xcassets */,
 				BE964B872B2C67C60060CDC7 /* LaunchScreen.storyboard */,
 				BE964B8A2B2C67C60060CDC7 /* Info.plist */,
-				BE964B902B2C74270060CDC7 /* MusicRecommendFactory.swift */,
-				BE964B922B2C78E20060CDC7 /* MusicRecommendHeaderView.swift */,
 			);
 			path = ExProtocolOrientedCollectionView;
+			sourceTree = "<group>";
+		};
+		BE964BA02B2D85480060CDC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE964B9E2B2D85250060CDC7 /* PopularCell.swift */,
+				BE964BA72B2D88780060CDC7 /* PopularSectionHeaderView.swift */,
+				BE964BA92B2DBECF0060CDC7 /* FeedCell.swift */,
+				BE964BAB2B2DBEDB0060CDC7 /* FeedSectionHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE964BA12B2D854C0060CDC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE964BA22B2D85510060CDC7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE964B9C2B2D76670060CDC7 /* CellViewModel.swift */,
+				BE964BA52B2D85DF0060CDC7 /* CollectionViewModel.swift */,
+				BE964B9A2B2D740C0060CDC7 /* SectionHeaderViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +183,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE964BA62B2D85DF0060CDC7 /* CollectionViewModel.swift in Sources */,
+				BE964B9D2B2D76670060CDC7 /* CellViewModel.swift in Sources */,
 				BE964B812B2C67C40060CDC7 /* ViewController.swift in Sources */,
-				BE964B912B2C74270060CDC7 /* MusicRecommendFactory.swift in Sources */,
+				BE964BAC2B2DBEDB0060CDC7 /* FeedSectionHeaderView.swift in Sources */,
+				BE964BA82B2D88780060CDC7 /* PopularSectionHeaderView.swift in Sources */,
+				BE964B9F2B2D85250060CDC7 /* PopularCell.swift in Sources */,
 				BE964B7D2B2C67C40060CDC7 /* AppDelegate.swift in Sources */,
-				BE964B932B2C78E20060CDC7 /* MusicRecommendHeaderView.swift in Sources */,
 				BE964B7F2B2C67C40060CDC7 /* SceneDelegate.swift in Sources */,
+				BE964B9B2B2D740C0060CDC7 /* SectionHeaderViewModel.swift in Sources */,
+				BE964BAA2B2DBECF0060CDC7 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
