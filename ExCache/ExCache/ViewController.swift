@@ -54,8 +54,6 @@ class ViewController: UIViewController {
             ImageDownloader.downloadImage(withURL: url) { image in
                 DispatchQueue.main.async {
                     if let downloadedImage = image {
-                        // 이미지 뷰에 다운로드한 이미지 표시
-                        // 예: imageView.image = downloadedImage
                         self.customImageView.image = downloadedImage
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
