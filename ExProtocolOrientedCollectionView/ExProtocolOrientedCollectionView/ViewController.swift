@@ -8,32 +8,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var collectionView: UICollectionView!
-    var collectionViewModel: CollectionViewModel!
-    
+
+    var collectionView: UICollectionView?
+    var collectionViewModel: CollectionViewModelProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         collectionViewModel = BaseCollectionViewModel()
-        
+        setupCollectionView()
+    }
+
+    private func setupCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 10
-        
-        // Create UICollectionView
+
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        guard let collectionView = collectionView else { return }
+
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(collectionView)
-        
-        // Register Cells
-        collectionViewModel.registerHeaders(for: collectionView)
-        collectionViewModel.registerCells(for: collectionView)
-        
-        // Set dataSource and delegate
+
+        collectionViewModel?.registerHeaders(for: collectionView)
+        collectionViewModel?.registerCells(for: collectionView)
+
         collectionView.dataSource = collectionViewModel
         collectionView.delegate = collectionViewModel
-        
-        // Add constraints for collectionView
+
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

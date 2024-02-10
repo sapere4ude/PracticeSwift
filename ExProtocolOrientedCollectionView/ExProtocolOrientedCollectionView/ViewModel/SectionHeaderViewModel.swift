@@ -7,13 +7,13 @@
 
 import UIKit
 
-@objc protocol SectionHeaderViewModel {
+@objc protocol SectionHeaderViewModelProtocol {
     var headerReuseIdentifier: String { get }
     var headerViewType: UICollectionReusableView.Type { get }
     func configure(headerView: UICollectionReusableView)
 }
 
-class PopularSectionHeaderViewModel: SectionHeaderViewModel {
+class PopularSectionHeaderViewModel: SectionHeaderViewModelProtocol {
     
     static let headerReuseIdentifier = "PopularSectionHeader"
     
@@ -32,7 +32,7 @@ class PopularSectionHeaderViewModel: SectionHeaderViewModel {
     }
 }
 
-class FeedSectionHeaderViewModel: SectionHeaderViewModel {
+class FeedSectionHeaderViewModel: SectionHeaderViewModelProtocol {
     
     static let headerReuseIdentifier = "FeedSectionHeader"
     

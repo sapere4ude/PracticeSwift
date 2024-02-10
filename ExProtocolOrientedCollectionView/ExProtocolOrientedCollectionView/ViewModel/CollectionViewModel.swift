@@ -7,12 +7,12 @@
 
 import UIKit
 
-@objc protocol CollectionViewModel: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    var cellViewModels: [[CellViewModel]] { get }
+@objc protocol CollectionViewModelProtocol: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    var cellViewModels: [[CellViewModelProtocol]] { get }
     var numberOfSections: Int { get }
     func numberOfItems(inSection section: Int) -> Int
-    func cellViewModel(at indexPath: IndexPath) -> CellViewModel
-    func sectionHeaderViewModel(forSection section: Int) -> SectionHeaderViewModel?
+    func cellViewModel(at indexPath: IndexPath) -> CellViewModelProtocol
+    func sectionHeaderViewModel(forSection section: Int) -> SectionHeaderViewModelProtocol?
     func registerCells(for collectionView: UICollectionView)
     func registerHeaders(for collectionView: UICollectionView)
     
@@ -23,27 +23,27 @@ import UIKit
     func numberOfSections(in collectionView: UICollectionView) -> Int
 }
 
-class BaseCollectionViewModel: NSObject, CollectionViewModel {
+class BaseCollectionViewModel: NSObject, CollectionViewModelProtocol {
 
-    var cellViewModels: [[CellViewModel]] {
+    var cellViewModels: [[CellViewModelProtocol]] {
         return [popularCellViewModels, feedCellViewModels]
     }
     
-    private let popularCellViewModels: [CellViewModel] = [PopularCellViewModel()]
+    private let popularCellViewModels: [CellViewModelProtocol] = [PopularCellViewModel(), PopularCellViewModel(), PopularCellViewModel()]
 
-    private let feedCellViewModels: [CellViewModel] = [FeedCellViewModel()]
+    private let feedCellViewModels: [CellViewModelProtocol] = [FeedCellViewModel()]
 
-    private let sectionHeaderViewModels: [SectionHeaderViewModel?] = [
+    private let sectionHeaderViewModels: [SectionHeaderViewModelProtocol?] = [
         PopularSectionHeaderViewModel(),
+        FeedSectionHeaderViewModel(),
         FeedSectionHeaderViewModel(),
     ]
 
-    // MARK: - CollectionViewModel Protocol
     var numberOfItems: Int {
         return cellViewModels.reduce(0) { $0 + $1.count }
     }
 
-    func cellViewModel(at indexPath: IndexPath) -> CellViewModel {
+    func cellViewModel(at indexPath: IndexPath) -> CellViewModelProtocol {
         switch indexPath.section {
         case 0:
             return popularCellViewModels[indexPath.item]
@@ -69,7 +69,7 @@ class BaseCollectionViewModel: NSObject, CollectionViewModel {
         }
     }
 
-    func sectionHeaderViewModel(forSection section: Int) -> SectionHeaderViewModel? {
+    func sectionHeaderViewModel(forSection section: Int) -> SectionHeaderViewModelProtocol? {
         return sectionHeaderViewModels[section]
     }
     

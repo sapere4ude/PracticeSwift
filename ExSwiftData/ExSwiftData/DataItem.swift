@@ -18,5 +18,4 @@ class DataItem: Identifiable {
         self.id = UUID().uuidString
         self.name = name
     }
-    
 }

@@ -8,13 +8,13 @@
 import UIKit
 
 
-@objc protocol CellViewModel {
+@objc protocol CellViewModelProtocol {
     var reuseIdentifier: String { get }
     var cellType: UICollectionViewCell.Type { get }
     func configure(cell: UICollectionViewCell)
 }
 
-class PopularCellViewModel: CellViewModel {
+class PopularCellViewModel: CellViewModelProtocol {
     
     static let cellReuseIdentifier = "PopularCell"
     
@@ -32,7 +32,7 @@ class PopularCellViewModel: CellViewModel {
     }
 }
 
-class FeedCellViewModel: CellViewModel {
+class FeedCellViewModel: CellViewModelProtocol {
     
     static let cellReuseIdentifier = "FeedCell"
     
