@@ -9,6 +9,8 @@ import UIKit
 import AVFoundation
 
 final class AdPlayer: UIView {
+    
+    weak var delegate: PlayerConfigurable?
 
     enum State {
         case none
@@ -26,19 +28,12 @@ final class AdPlayer: UIView {
     public var onShow: (() -> Void)?
     
     // MARK: - Player
-    /// 플레이어
     internal var player: AVPlayer
-    /// 플레이어
     internal var playerLayer: AVPlayerLayer?
-    ///
     internal let playerContext = UnsafeMutableRawPointer(bitPattern: 1)
-    ///
     internal var playerItem: AVPlayerItem?
-    ///
     internal var asset: AVAsset!
-    ///
     internal var loadSeekTime: CMTime?
-    /// 영상 광고 상태관리
     internal var state: State = .none
     internal let requiredAssetKeys = [
         "playable",
@@ -46,24 +41,16 @@ final class AdPlayer: UIView {
     ]
     
     // MARK: - Timeout Timer
-    /// 영상 광고 타임아웃 타이머
     internal var timeoutTimer: Timer?
-    /// 영상 광고 타임아웃 시간
     internal let timeoutInterval: TimeInterval = 2.0
     // MARK: - 남은 시간
     internal var currentVideoTime: Double = 0
     internal var remainingTimeToSkip: Double = 0
-    /// 광고 영상 모델
     internal var model: AdModel?
-    /// 영상 광고 URL
     internal var videoURL: URL?
-    /// 영상 광고 확인을 위한 타임 옵저버
-    internal var timeObserver: Any? // TODO: Notification 파일 안에서만 사용하므로 지역변수로 변경필요
-    /// 시스템 정지 호출 플래그
-    internal var pauseAction: Bool = false //함수호출을 통해 정지 (시스템에서 정지를 보낼경우를 비교하기 위함)
-    /// 플레이어 실행 준비 플래그
+    internal var timeObserver: Any?
+    internal var pauseAction: Bool = false
     internal var readyToPlay: Bool = false
-    /// 영상 광고 뒤로가기 버튼
     lazy var backButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "btV1BackShadows", in: Bundle(identifier: "co.kr.Advertisement"), with: nil), for: .normal)
@@ -121,12 +108,17 @@ final class AdPlayer: UIView {
         return label
     }()
     
+    var thumbnailImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     // MARK: - Initialize
     init(player: AVPlayer = AVPlayer()) {
         self.player = player
         super.init(frame: .zero)
-        self.backgroundColor = .systemGreen
-        //self.load(for: nil)
+        setupUI()
     }
     
     deinit {

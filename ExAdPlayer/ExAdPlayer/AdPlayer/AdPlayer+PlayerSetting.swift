@@ -9,34 +9,42 @@ import UIKit
 import Foundation
 import AVFoundation
 
+protocol PlayerConfigurable: AnyObject {
+    func prepareUI()
+}
+
 extension AdPlayer {
-    
-    // MARK: - 미디어 셋팅
+
     func prepareToPlay(url: URL,
                        seekTime: CMTime = CMTimeMake(value: 0, timescale: 1),
-                       videoGravity :AVLayerVideoGravity = .resizeAspect,
+                       videoGravity :AVLayerVideoGravity = .resize,
                        isMute: Bool = false) {
         
-        guard self.videoURL?.absoluteString != url.absoluteString else {
-            return
-        }
-        
-        self.resetPlayer()
-        self.videoURL = url
-        self.asset = AVAsset(url: url)
-        self.playerItem = AVPlayerItem(asset: self.asset, automaticallyLoadedAssetKeys: requiredAssetKeys)
-        self.player = AVPlayer(playerItem: self.playerItem)
-        self.player.isMuted = isMute
-        self.initPlayerLayer(videoGravity: videoGravity)
-        
-        if seekTime.value != 0 && seekTime.timescale != 1 {
-            self.player.seek(to: seekTime)
-            loadSeekTime = seekTime
-        }
-        else {
-            loadSeekTime = nil
+        DispatchQueue.global().async {
+            guard self.videoURL?.absoluteString != url.absoluteString else { return }
+            self.videoURL = url
+            let playerItem = AVPlayerItem(url: url)
+            playerItem.addObserver(self, forKeyPath: "status", options: [.new, .old], context: nil)
+            let player = AVPlayer(playerItem: playerItem)
+            
+            DispatchQueue.main.async {
+                self.player = player
+                self.initPlayerLayer(videoGravity: videoGravity)
+            }
         }
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "status" {
+            if let playerItem = object as? AVPlayerItem,
+               playerItem.status == .readyToPlay {
+                DispatchQueue.main.async {
+                    self.delegate?.prepareUI()
+                }
+            }
+        }
+    }
+
     
     private func initPlayerLayer(videoGravity :AVLayerVideoGravity) {
         if let playerLayer = self.playerLayer {
@@ -55,14 +63,5 @@ extension AdPlayer {
         }
         self.videoURL = nil
         self.playerItem = nil
-    }
-    
-    public func load(for model: AdModel?) {
-  
-        let url = URL(string: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4")!
-        
-        prepareToPlay(url: url)
-        player.play()
-        setupUI()
     }
 }
