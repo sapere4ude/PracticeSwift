@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         return imageView
     }()
     
-    //private let requestAPI = RequestAPI()
     private let viewModel = RequestViewModel()
     private let input: PassthroughSubject<RequestViewModel.Input, Never> = .init()
     private var cancellables = Set<AnyCancellable>()
@@ -40,6 +39,11 @@ class ViewController: UIViewController {
         setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        input.send(.viewDidAppear)
+    }
+    
     private func bind() {
         let output = viewModel.transform(input: input.eraseToAnyPublisher())
         
@@ -47,17 +51,20 @@ class ViewController: UIViewController {
             .receive(on: RunLoop.main)
             .sink { [weak self] event in
                 switch event {
-                case .fetchDidFailed(let error):
-                    //self?.
-                case .fetchDidSucceed(data: <#T##Data#>)
+                case .toggleButton(let isEnabled):
+                    self?.clickButton.isEnabled = isEnabled
+                case .fetchDidSucceed(let data):
+                    self?.displayRandomImage(data)
                 }
             }
+            .store(in: &cancellables)
     }
     
-    func setupUI() {
+    private func setupUI() {
         view.backgroundColor = .systemBackground
         view.addSubview(clickButton)
         view.addSubview(imageView)
+        
         NSLayoutConstraint.activate([
             clickButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             clickButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 150),
@@ -72,64 +79,12 @@ class ViewController: UIViewController {
     }
     
     @objc func didTapButton() {
-//        requestAPI.getUrlRequest()
-//            .sink { [weak self] completion in
-//                if case .failure(let error) = completion {
-//                    print(#fileID, #function, #line, "Error:", error)
-//                }
-//            } receiveValue: { [weak self] randomImage in
-//                self?.displayRandomImage(randomImage)
-//            }.store(in: &cancellables)
+        input.send(.refreshButtonDidTap)
     }
     
-    func displayRandomImage(_ data: Data) {
+    private func displayRandomImage(_ data: Data) {
         DispatchQueue.main.async {
             self.imageView.image = UIImage(data: data)
         }
-    }
-}
-
-class RequestViewModel {
-    
-    enum Input {
-        case viewDidAppear
-        case refreshButtonDidTap
-    }
-    
-    enum Output {
-        case fetchDidFailed(error: Error)
-        case fetchDidSucceed(data: Data)
-        case toggleButton(isEnabled: Bool)
-    }
-    
-    private let requestAPI: RequestAPI
-    private let output: PassthroughSubject<Output, Never> = .init()
-    private var cancellables = Set<AnyCancellable>()
-    
-    init(requestAPI: RequestAPI = RequestAPI()) {
-        self.requestAPI = requestAPI
-    }
-    
-    func transform(input: AnyPublisher<Input, Never>) -> AnyPublisher<Output, Never> {
-        input.sink { [weak self] event in
-            switch event {
-            case .viewDidAppear, .refreshButtonDidTap:
-                self?.handleGetUrlRequest()
-            }
-        }.store(in: &cancellables)
-        
-        return output.eraseToAnyPublisher()
-    }
-    
-    private func handleGetUrlRequest() {
-        requestAPI.getUrlRequest()
-            .sink { [weak self] completion in
-                self?.output.send(.toggleButton(isEnabled: true))
-                if case .failure(let error) = completion {
-                    self?.output.send(.fetchDidFailed(error: error))
-                }
-            } receiveValue: { [weak self] data in
-                self?.output.send(.fetchDidSucceed(data: data))
-            }.store(in: &cancellables)
     }
 }
