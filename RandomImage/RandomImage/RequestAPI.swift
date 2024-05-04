@@ -1,0 +1,25 @@
+//
+//  RequestAPI.swift
+//  RandomImage
+//
+//  Created by Kant on 5/4/24.
+//
+
+import Combine
+import Foundation
+
+protocol Requestable {
+    func getUrlRequest() -> AnyPublisher<Data, any Error>
+}
+
+class RequestAPI: Requestable {
+    func getUrlRequest() -> AnyPublisher<Data, any Error> {
+        let url = URL(string: "https://picsum.photos/200")!
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .catch { error in
+                return Fail(error: error).eraseToAnyPublisher()
+            }
+            .map( { $0.data })
+            .eraseToAnyPublisher()
+    }
+}
