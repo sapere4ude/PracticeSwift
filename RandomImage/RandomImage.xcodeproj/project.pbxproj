@@ -61,11 +61,11 @@
 				BEF660942BE5C589004600BA /* AppDelegate.swift */,
 				BEF660962BE5C589004600BA /* SceneDelegate.swift */,
 				BEF660982BE5C589004600BA /* ViewController.swift */,
+				BEF660AA2BE6832E004600BA /* RequestViewModel.swift */,
 				BEF660A82BE67CF4004600BA /* RequestAPI.swift */,
 				BEF6609D2BE5C58A004600BA /* Assets.xcassets */,
 				BEF6609F2BE5C58A004600BA /* LaunchScreen.storyboard */,
 				BEF660A22BE5C58A004600BA /* Info.plist */,
-				BEF660AA2BE6832E004600BA /* RequestViewModel.swift */,
 			);
 			path = RandomImage;
 			sourceTree = "<group>";

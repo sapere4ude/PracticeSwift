@@ -15,7 +15,6 @@ class ViewController: UIViewController {
         button.setTitle("UPDATE", for: .normal)
         button.backgroundColor = .systemBlue
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 15
         button.clipsToBounds = true
         return button
@@ -25,8 +24,15 @@ class ViewController: UIViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 15
         imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    private var titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.layer.cornerRadius = 15
+        label.clipsToBounds = true
+        return label
     }()
     
     private let viewModel = RequestViewModel()
@@ -45,6 +51,7 @@ class ViewController: UIViewController {
     }
     
     private func bind() {
+        
         let output = viewModel.transform(input: input.eraseToAnyPublisher())
         
         output
@@ -53,8 +60,16 @@ class ViewController: UIViewController {
                 switch event {
                 case .toggleButton(let isEnabled):
                     self?.clickButton.isEnabled = isEnabled
-                case .fetchDidSucceed(let data):
-                    self?.displayRandomImage(data)
+                case .fetchDidSucceed(let model):
+                    self?.displayRandomImage(model) { isSuccess in
+                        if isSuccess {
+                            DispatchQueue.main.async {
+                                self?.titleLabel.text = model.author
+                            }
+                        }
+                    }
+                case .fetchDidFailed(error: let error):
+                    self?.titleLabel.text = error.localizedDescription
                 }
             }
             .store(in: &cancellables)
@@ -62,19 +77,25 @@ class ViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .systemBackground
-        view.addSubview(clickButton)
-        view.addSubview(imageView)
+        [titleLabel, imageView, clickButton].forEach {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
         
         NSLayoutConstraint.activate([
-            clickButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            clickButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 150),
-            clickButton.widthAnchor.constraint(equalToConstant: 200),
-            clickButton.heightAnchor.constraint(equalToConstant: 70),
-            
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
             imageView.widthAnchor.constraint(equalToConstant: 300),
-            imageView.heightAnchor.constraint(equalToConstant: 300)
+            imageView.heightAnchor.constraint(equalToConstant: 300),
+            
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30),
+            titleLabel.widthAnchor.constraint(equalToConstant: 300),
+
+            clickButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            clickButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 100),
+            clickButton.widthAnchor.constraint(equalToConstant: 200),
+            clickButton.heightAnchor.constraint(equalToConstant: 70)
         ])
     }
     
@@ -82,9 +103,18 @@ class ViewController: UIViewController {
         input.send(.refreshButtonDidTap)
     }
     
-    private func displayRandomImage(_ data: Data) {
-        DispatchQueue.main.async {
-            self.imageView.image = UIImage(data: data)
+    private func displayRandomImage(_ data: RequestModel, completion: @escaping (Bool) -> Void) {
+        if let url = URL(string: data.download_url) {
+            URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.imageView.image = image
+                        completion(true)
+                    }
+                }
+            }.resume()
+        } else {
+            completion(false)
         }
     }
 }

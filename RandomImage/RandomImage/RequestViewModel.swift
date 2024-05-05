@@ -16,8 +16,8 @@ class RequestViewModel {
     }
     
     enum Output {
-        //case fetchDidFailed(error: Error)
-        case fetchDidSucceed(data: Data)
+        case fetchDidFailed(error: Error)
+        case fetchDidSucceed(model: RequestModel)
         case toggleButton(isEnabled: Bool)
     }
     
@@ -45,10 +45,10 @@ class RequestViewModel {
             .sink { [weak self] completion in
                 self?.output.send(.toggleButton(isEnabled: true))
                 if case .failure(let error) = completion {
-                    //self?.output.send(.fetchDidFailed(error: error))
+                    self?.output.send(.fetchDidFailed(error: error))
                 }
-            } receiveValue: { [weak self] data in
-                self?.output.send(.fetchDidSucceed(data: data))
+            } receiveValue: { [weak self] requestModel in
+                self?.output.send(.fetchDidSucceed(model: requestModel))
             }.store(in: &cancellables)
     }
 }
