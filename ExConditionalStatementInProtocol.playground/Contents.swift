@@ -1,26 +1,24 @@
 import Foundation
 
-protocol Dirvable {
+protocol Drivable {
     func drive()
 }
 
-class Car {
+class Car: Drivable {
     func drive() {
         print("차를 운전합니다.")
     }
 }
 
-class Bicycle {
+class Bicycle: Drivable {
     func drive() {
         print("자전거를 탑니다.")
     }
 }
 
 func activateVehicle(_ vehicle: Any) {
-    if vehicle is Car {
-        (vehicle as! Car).drive()
-    } else if vehicle is Bicycle {
-        (vehicle as! Bicycle).drive()
+    if let drivableVehicle = vehicle as? Drivable {
+        drivableVehicle.drive()
     }
 }
 
