@@ -54,11 +54,12 @@ final class LoginViewController: UIViewController, LoginViewProtocol {
         ])
     }
     
-    @objc
-    private func didTapLogin() async {
-        guard let userName = userNameTextField.text,
-              let password = passwordTextField.text else { return }
-        await presenter?.login(userName: userName, password: password)
+    @objc private func didTapLogin() {
+        Task {
+            guard let userName = userNameTextField.text,
+                  let password = passwordTextField.text else { return }
+            await presenter?.login(userName: userName, password: password)
+        }
     }
     
     func showLoginSuccess() {

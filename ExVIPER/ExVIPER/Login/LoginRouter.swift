@@ -15,8 +15,7 @@ final class LoginRouter: LoginRouterProtocol {
     weak var viewController: UIViewController?
     
     func navigateToHome() {
-        let homeRouter = HomeRouter()
-        let homeViewController = homeRouter.builder()
+        let homeViewController = HomeRouter().builder()
         viewController?.navigationController?.pushViewController(homeViewController, animated: true)
     }
     
@@ -27,6 +26,7 @@ final class LoginRouter: LoginRouterProtocol {
         let router = LoginRouter()
         
         view.presenter = presenter
+        presenter.view = view
         presenter.interactor = interactor
         presenter.router = router
         router.viewController = view
@@ -34,5 +34,3 @@ final class LoginRouter: LoginRouterProtocol {
         return view
     }
 }
-
-
